@@ -26,5 +26,22 @@
   background-color: #FFFFFF;
   border-right: #EEEEEE 3px solid;
 }
+#tablero #barra-de-navegacion > a {
+  position: relative;
+  display: block;
+  border-bottom: #EEEEEE 2px solid;
+  padding: 15px 20px;
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+}
+#tablero #barra-de-navegacion > a > i {
+  position: relative;
+  margin-right: 10px;
+}
+#tablero #barra-de-navegacion > a:hover {
+  background-color: #EEEEEE;
+  cursor: pointer;
+}
 
 /***** Styles *****/

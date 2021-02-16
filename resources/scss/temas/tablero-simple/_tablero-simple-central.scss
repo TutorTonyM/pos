@@ -13,5 +13,25 @@ $anchoDeBarra: 200px;
         height: 100vh;
         background-color: $white;
         border-right: $light 3px solid;
+
+        >a{
+            position: relative;
+            display: block;
+            border-bottom: $light 2px solid;
+            padding: 15px 20px;
+            color: inherit;
+            font-weight: bold;
+            text-decoration: none;
+
+            >i{
+                position: relative;
+                margin-right: 10px;
+            }
+
+            &:hover{
+                background-color: $light;
+                cursor: pointer;
+            }
+        }
     }
 }
