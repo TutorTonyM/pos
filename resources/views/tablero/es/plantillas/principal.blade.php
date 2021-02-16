@@ -29,10 +29,14 @@
     </head>
 
     <body>
+        <div id="tablero">
+            @include('tablero.es.parciales.barra-de-navegacion')
 
-        @include('tablero.es.parciales.barra-de-navegacion')
-        {{--@include('tablero.es.parciales.alertas-basicas')--}}
-        @yield('contenido')
+            <main>                
+                {{--@include('tablero.es.parciales.alertas-basicas')--}}
+                @yield('contenido')
+            </main>
+        </div>
 
         <script src="{{ asset('js/manifest.js') }}"></script>
         <script src="{{ asset('js/vendor.js') }}"></script>

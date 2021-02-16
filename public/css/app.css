@@ -16,61 +16,6 @@
 /***** Themes *****/
 #tablero main {
   padding-top: 60px;
-  margin-left: 70px;
-}
-#tablero #barra-de-control {
-  position: absolute;
-  padding-top: 60px;
-  width: 70px;
-  height: 100vh;
-  left: 0;
-  background-color: #FFFFFF;
-  border-right: #EEEEEE 3px solid;
-}
-#tablero #barra-de-control > a {
-  position: relative;
-  display: block;
-  border-bottom: #EEEEEE 2px solid;
-  padding: 15px 20px;
-  color: inherit;
-  text-decoration: none;
-  font-weight: bold;
-}
-#tablero #barra-de-control > a > i {
-  position: relative;
-  margin-right: 10px;
-}
-#tablero #barra-de-control > a > span {
-  position: relative;
-  display: none;
 }
 
-@media only screen and (min-width: 768px) {
-  #tablero {
-    margin-left: 175px;
-  }
-  #tablero #barra-de-control {
-    width: 175px;
-  }
-  #tablero #barra-de-control > a > i {
-    display: none;
-  }
-  #tablero #barra-de-control > a > span {
-    display: block;
-  }
-}
-@media only screen and (min-width: 992px) {
-  #tablero {
-    margin-left: 200px;
-  }
-  #tablero #barra-de-control {
-    width: 200px;
-  }
-  #tablero #barra-de-control > a > i {
-    display: inline-block;
-  }
-  #tablero #barra-de-control > a > span {
-    display: inline-block;
-  }
-}
 /***** Styles *****/
