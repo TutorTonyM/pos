@@ -18,10 +18,8 @@
         @hasSection('sujeto')<meta name="subject" content="@yield('sujeto')" />@endif
         @hasSection('autor')<meta name="author" content="@yield('autor')" />@endif
 
-        <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
+        <link rel="shortcut icon" href="{{ asset('imagenes/favicon.ico') }}">
         <link rel="apple-touch-icon" href="{{ asset('images/apple-touch-icon.png') }}">
-        <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/apple-touch-icon-72x72.png') }}">
-        <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('images/apple-touch-icon-114x114.png') }}">
 
         <link rel="stylesheet" href="{{ asset(mix('css/vendor.css')) }}">
         <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
