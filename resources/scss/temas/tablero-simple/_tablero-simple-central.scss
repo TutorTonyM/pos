@@ -1,4 +1,4 @@
-$anchoDeBarra: 200px;
+$anchoDeBarra: 70px;
 
 #tablero{
     main{
@@ -28,10 +28,75 @@ $anchoDeBarra: 200px;
                 margin-right: 10px;
             }
 
+            >span{
+                position: relative;
+                display: none;
+            }
+
             &:hover{
                 background-color: $light;
                 cursor: pointer;
             }
         }
     }
+}
+
+// Small Screen
+@media only screen and (min-width: 576px){
+    
+}
+
+// Medium Screen
+@media only screen and (min-width: 768px){
+    $anchoDeBarra: 175px;
+
+    #tablero{
+        main{
+            margin-left: $anchoDeBarra;
+        }
+
+        #barra-de-navegacion{
+            width: $anchoDeBarra;
+
+            >a{
+                >i{
+                    display: none;
+                }
+
+                >span{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+// Large Screen
+@media only screen and (min-width: 992px){
+    $anchoDeBarra: 200px;
+
+    #tablero{
+        main{
+            margin-left: $anchoDeBarra;
+        }
+
+        #barra-de-navegacion{
+            width: $anchoDeBarra;
+
+            >a{
+                >i{
+                    display: inline-block;
+                }
+
+                >span{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+// Extra Large Screen
+@media only screen and (min-width: 1200px){
+
 }

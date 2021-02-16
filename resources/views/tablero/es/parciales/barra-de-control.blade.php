@@ -1,16 +1,17 @@
 <nav id="barra-de-navegacion">
     <a href="#">
         <i class="fas fa-cash-register"></i>
-        {{ __('Cash Register') }}      
+        <span>{{ __('Cash Register') }}</span>
+         
     </a>
 
     <a href="#">
         <i class="fas fa-boxes"></i>
-        {{ __('Products') }}      
+        <span>{{ __('Products') }}</span>     
     </a>
 
     <a href="#">
         <i class="fas fa-box-open"></i>
-        {{ __('Providers') }}      
+        <span>{{ __('Providers') }}</span>     
     </a>
 </nav>
