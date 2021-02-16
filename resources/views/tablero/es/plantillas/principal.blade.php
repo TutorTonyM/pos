@@ -23,6 +23,7 @@
         <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/apple-touch-icon-72x72.png') }}">
         <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('images/apple-touch-icon-114x114.png') }}">
 
+        <link rel="stylesheet" href="{{ asset(mix('css/vendor.css')) }}">
         <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
 
         <!-- AdSense -->
@@ -35,6 +36,8 @@
         {{--@include('tablero.es.parciales.alertas-basicas')--}}
         @yield('contenido')
 
+        <script src="{{ asset('js/manifest.js') }}"></script>
+        <script src="{{ asset('js/vendor.js') }}"></script>
         <script src="{{ asset(mix('js/app.js')) }}"></script>
 
     </body>
