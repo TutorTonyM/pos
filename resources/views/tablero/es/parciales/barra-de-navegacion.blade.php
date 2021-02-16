@@ -12,7 +12,8 @@
             <ul class="navbar-nav ml-auto">
                 {{-- @auth --}}
                     <li class="nav-item">
-                        <a id="full-screen-button" class="nav-link" href="#"><i class="fa fa-expand-arrows-alt"></i> <span>Expand</span></a>
+                        <a id="full-screen-button" class="nav-link" href="#" data-expander="Expander" data-colapsar="Colapsar" data-expandido="0">
+                            <i class="fa fa-expand-arrows-alt"></i> <span>Expandir</span></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

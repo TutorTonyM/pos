@@ -1,3 +1,7 @@
-window.$ = window.jQuery = import('jquery');
-window.popper = import('popper.js');
-import('bootstrap');
+window.$ = window.jQuery = require('jquery');
+
+window.popper = require('popper.js');
+
+require('bootstrap');
+
+require('./boton-pantalla-completa');
