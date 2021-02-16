@@ -14,6 +14,18 @@
 ** WEB SAFE COLORS **
 ********************/
 /***** Themes *****/
+#tablero #barra-de-navegacion > a > .menu > a,
+#tablero #barra-de-navegacion > .desplegable > .menu > a, #tablero #barra-de-navegacion > a,
+#tablero #barra-de-navegacion > .desplegable {
+  position: relative;
+  display: block;
+  border-bottom: #EEEEEE 2px solid;
+  padding: 15px 20px;
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 #tablero main {
   padding-top: 60px;
   margin-left: 70px;
@@ -26,16 +38,6 @@
   background-color: #FFFFFF;
   border-right: #EEEEEE 3px solid;
 }
-#tablero #barra-de-navegacion > a,
-#tablero #barra-de-navegacion > .desplegable {
-  position: relative;
-  display: block;
-  border-bottom: #EEEEEE 2px solid;
-  padding: 15px 20px;
-  color: inherit;
-  font-weight: bold;
-  text-decoration: none;
-}
 #tablero #barra-de-navegacion > a > i,
 #tablero #barra-de-navegacion > .desplegable > i {
   position: relative;
@@ -45,6 +47,24 @@
 #tablero #barra-de-navegacion > .desplegable > span {
   position: relative;
   display: none;
+}
+#tablero #barra-de-navegacion > a > .menu,
+#tablero #barra-de-navegacion > .desplegable > .menu {
+  position: absolute;
+  left: calc(100% + 5px);
+  background-color: #EEEEEE;
+  top: 5px;
+  white-space: nowrap;
+}
+#tablero #barra-de-navegacion > a > .menu > a,
+#tablero #barra-de-navegacion > .desplegable > .menu > a {
+  border-bottom: #DDDDDD 2px solid;
+  padding: 10px 20px;
+}
+#tablero #barra-de-navegacion > a > .menu > a:hover,
+#tablero #barra-de-navegacion > .desplegable > .menu > a:hover {
+  background-color: #DDDDDD;
+  cursor: pointer;
 }
 #tablero #barra-de-navegacion > a:hover,
 #tablero #barra-de-navegacion > .desplegable:hover {

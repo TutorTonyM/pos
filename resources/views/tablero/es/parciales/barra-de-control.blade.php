@@ -7,7 +7,11 @@
 
     <div class="desplegable">
         <i class="fas fa-boxes"></i>
-        <span>{{ __('Products') }}</span>     
+        <span>{{ __('Products') }}</span>
+        <div class="menu">
+            <a href="#">{{ __('View Products') }}</a>
+            <a href="#">{{ __('Agregar Products') }}</a>
+        </div>
     </div>
 
     <div class="desplegable">

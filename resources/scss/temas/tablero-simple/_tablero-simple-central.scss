@@ -1,28 +1,39 @@
-$anchoDeBarra: 70px;
+$color-de-fondo-principal: $blanco;
+$color-de-fondo-flotado: $claro;
+$color-de-fondo-desplegable: $claro;
+$color-de-bordes: $claro;
+$color-de-bordes-de-desplegable: $sombra1;
+$color-de-fondo-desplegable-flotado: $sombra1;
+
+$anchor-de-barra: 70px;
+
+%contenedorDeBotones{
+    position: relative;
+    display: block;
+    border-bottom: $color-de-bordes 2px solid;
+    padding: 15px 20px;
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+}
 
 #tablero{
     main{
         padding-top: 60px;
-        margin-left: $anchoDeBarra;
+        margin-left: $anchor-de-barra;
     }
 
     #barra-de-navegacion{
         position: absolute;
         padding-top: 60px;
-        width: $anchoDeBarra;
+        width: $anchor-de-barra;
         height: 100vh;
-        background-color: $white;
-        border-right: $light 3px solid;
+        background-color: $color-de-fondo-principal;
+        border-right: $color-de-bordes 3px solid;
 
         >a,
         >.desplegable{
-            position: relative;
-            display: block;
-            border-bottom: $light 2px solid;
-            padding: 15px 20px;
-            color: inherit;
-            font-weight: bold;
-            text-decoration: none;
+            @extend %contenedorDeBotones;
 
             >i{
                 position: relative;
@@ -34,8 +45,27 @@ $anchoDeBarra: 70px;
                 display: none;
             }
 
+            >.menu{
+                position: absolute;
+                left: calc(100% + 5px);
+                background-color: $color-de-fondo-desplegable;
+                top: 5px;
+                white-space: nowrap;
+
+                >a{
+                    @extend %contenedorDeBotones;
+                    border-bottom: $color-de-bordes-de-desplegable 2px solid;
+                    padding: 10px 20px;
+
+                    &:hover{
+                        background-color: $color-de-fondo-desplegable-flotado;
+                        cursor: pointer;
+                    }
+                }
+            }
+
             &:hover{
-                background-color: $light;
+                background-color: $color-de-fondo-flotado;
                 cursor: pointer;
             }
         }
@@ -58,15 +88,15 @@ $anchoDeBarra: 70px;
 
 // Medium Screen
 @media only screen and (min-width: 768px){
-    $anchoDeBarra: 175px;
+    $anchor-de-barra: 175px;
 
     #tablero{
         main{
-            margin-left: $anchoDeBarra;
+            margin-left: $anchor-de-barra;
         }
 
         #barra-de-navegacion{
-            width: $anchoDeBarra;
+            width: $anchor-de-barra;
 
             >a,
             >.desplegable{
@@ -84,15 +114,15 @@ $anchoDeBarra: 70px;
 
 // Large Screen
 @media only screen and (min-width: 992px){
-    $anchoDeBarra: 200px;
+    $anchor-de-barra: 200px;
 
     #tablero{
         main{
-            margin-left: $anchoDeBarra;
+            margin-left: $anchor-de-barra;
         }
 
         #barra-de-navegacion{
-            width: $anchoDeBarra;
+            width: $anchor-de-barra;
 
             >a,
             >.desplegable{
