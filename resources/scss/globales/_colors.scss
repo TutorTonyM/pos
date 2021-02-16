@@ -1,0 +1,964 @@
+//GLOBAL COLORS
+$error: #dc3545;
+$correct: #28a745;
+
+//SHADES
+$black: #000000;
+$dark: #111111;
+$shade12: #222222;
+$shade11: #333333;
+$shade10: #444444;
+$shade9: #555555;
+$shade8: #666666;
+$shade7: #777777;
+$shade6: #888888;
+$shade5: #999999;
+$shade4: #AAAAAA;
+$shade3: #BBBBBB;
+$shade2: #CCCCCC;
+$shade1: #DDDDDD;
+$light: #EEEEEE;
+$white: #FFFFFF;
+
+
+/****************
+** HTML COLORS **
+****************/
+//RED HTML COLOR NAMES
+$IndianRed: IndianRed; 				//#CD5C5C 	RGB(205, 92, 92)
+$LightCoral: LightCoral; 			//#F08080 	RGB(240, 128, 128)
+$Salmon: Salmon; 					//#FA8072 	RGB(250, 128, 114)
+$DarkSalmon: DarkSalmon; 			//#E9967A 	RGB(233, 150, 122)
+$LightSalmon: LightSalmon;			//#FFA07A 	RGB(255, 160, 122)
+$Crimson: Crimson; 					//#DC143C 	RGB(220, 20, 60)
+$Red: Red; 							//#FF0000 	RGB(255, 0, 0)
+$FireBrick: FireBrick; 				//#B22222 	RGB(178, 34, 34)
+$DarkRed: DarkRed; 					//#8B0000 	RGB(139, 0, 0)
+
+//PINK HTML COLOR NAMES
+$Pink: Pink; 						//#FFC0CB 	RGB(255, 192, 203)
+$LightPink: LightPink; 				//#FFB6C1 	RGB(255, 182, 193)
+$HotPink: HotPink; 					//#FF69B4 	RGB(255, 105, 180)
+$DeepPink: DeepPink; 				//#FF1493 	RGB(255, 20, 147)
+$MediumVioletRed: MediumVioletRed; 	//#C71585 	RGB(199, 21, 133)
+$PaleVioletRed: PaleVioletRed; 		//#DB7093 	RGB(219, 112, 147)
+
+//ORANGE HTML COLOR NAMES
+$LightSalmon: LightSalmon; 			//#FFA07A 	RGB(255, 160, 122)
+$Coral: Coral; 						//#FF7F50 	RGB(255, 127, 80)
+$Tomato: Tomato; 					//#FF6347 	RGB(255, 99, 71)
+$OrangeRed: OrangeRed; 				//#FF4500 	RGB(255, 69, 0)
+$DarkOrange: DarkOrange; 			//#FF8C00 	RGB(255, 140, 0)
+$Orange: Orange; 					//#FFA500 	RGB(255, 165, 0)
+
+//YELLOW HTML COLOR NAMES
+$Gold: Gold; 						//#FFD700 	RGB(255, 215, 0)
+$Yellow: Yellow; 					//#FFFF00 	RGB(255, 255, 0)
+$LightYellow: LightYellow; 			//#FFFFE0 	RGB(255, 255, 224)
+$LemonChiffon: LemonChiffon; 		//#FFFACD 	RGB(255, 250, 205)
+$LightGoldenRodYellow: LightGoldenRodYellow; 	//#FAFAD2 	RGB(250, 250, 210)
+$PapayaWhip: PapayaWhip; 			//#FFEFD5 	RGB(255, 239, 213)
+$Moccasin: Moccasin; 				//#FFE4B5 	RGB(255, 228, 181)
+$PeachPuff: PeachPuff; 				//#FFDAB9 	RGB(255, 218, 185)
+$PaleGoldenRod: PaleGoldenRod; 		//#EEE8AA 	RGB(238, 232, 170)
+$Khaki: Khaki; 						//#F0E68C 	RGB(240, 230, 140)
+$DarkKhaki: DarkKhaki; 				//#BDB76B 	RGB(189, 183, 107)
+
+//PURPLE HTML COLOR NAMES
+$Lavender: Lavender; 				//#E6E6FA 	RGB(230, 230, 250)
+$Thistle: Thistle; 					//#D8BFD8 	RGB(216, 191, 216)
+$Plum: Plum; 						//#DDA0DD 	RGB(221, 160, 221)
+$Violet: Violet; 					//#EE82EE 	RGB(238, 130, 238)
+$Orchid: Orchid; 					//#DA70D6 	RGB(218, 112, 214)
+$Fuchsia: Fuchsia; 					//#FF00FF 	RGB(255, 0, 255)
+$Magenta: Magenta; 					//#FF00FF 	RGB(255, 0, 255)
+$MediumOrchid: MediumOrchid; 		//#BA55D3 	RGB(186, 85, 211)
+$MediumPurple: MediumPurple; 		//#9370DB 	RGB(147, 112, 219)
+$RebeccaPurple: RebeccaPurple; 		//#663399 	RGB(102, 51, 153)
+$BlueViolet: BlueViolet; 			//#8A2BE2 	RGB(138, 43, 226)
+$DarkViolet: DarkViolet; 			//#9400D3 	RGB(148, 0, 211)
+$DarkOrchid: DarkOrchid; 			//#9932CC 	RGB(153, 50, 204)
+$DarkMagenta: DarkMagenta; 			//#8B008B 	RGB(139, 0, 139)
+$Purple: Purple; 					//#800080 	RGB(128, 0, 128)
+$Indigo: Indigo; 					//#4B0082 	RGB(75, 0, 130)
+$SlateBlue: SlateBlue; 				//#6A5ACD 	RGB(106, 90, 205)
+$DarkSlateBlue: DarkSlateBlue; 		//#483D8B 	RGB(72, 61, 139)
+$MediumSlateBlue: MediumSlateBlue; 	//#7B68EE 	RGB(123, 104, 238)
+
+//GREEN HTML COLOR NAMES
+$GreenYellow: GreenYellow; 			//#ADFF2F 	RGB(173, 255, 47)
+$Chartreuse: Chartreuse; 			//#7FFF00 	RGB(127, 255, 0)
+$LawnGreen: LawnGreen; 				//#7CFC00 	RGB(124, 252, 0)
+$Lime: Lime; 						//#00FF00 	RGB(0, 255, 0)
+$LimeGreen: LimeGreen; 				//#32CD32 	RGB(50, 205, 50)
+$PaleGreen: PaleGreen; 				//#98FB98 	RGB(152, 251, 152)
+$LightGreen: LightGreen; 			//#90EE90 	RGB(144, 238, 144)
+$MediumSpringGreen: MediumSpringGreen; 		//#00FA9A 	RGB(0, 250, 154)
+$SpringGreen: SpringGreen; 			//#00FF7F 	RGB(0, 255, 127)
+$MediumSeaGreen: MediumSeaGreen; 	//#3CB371 	RGB(60, 179, 113)
+$SeaGreen: SeaGreen; 				//#2E8B57 	RGB(46, 139, 87)
+$ForestGreen: ForestGreen; 			//#228B22 	RGB(34, 139, 34)
+$Green: Green; 						//#008000 	RGB(0, 128, 0)
+$DarkGreen: DarkGreen; 				//#006400 	RGB(0, 100, 0)
+$YellowGreen: YellowGreen; 			//#9ACD32 	RGB(154, 205, 50)
+$OliveDrab: OliveDrab; 				//#6B8E23 	RGB(107, 142, 35)
+$Olive: Olive; 						//#808000 	RGB(128, 128, 0)
+$DarkOliveGreen: DarkOliveGreen;	//#556B2F 	RGB(85, 107, 47)
+$MediumAquaMarine: MediumAquaMarine; 		//#66CDAA 	RGB(102, 205, 170)
+$DarkSeaGreen: DarkSeaGreen; 		//#8FBC8B 	RGB(143, 188, 139)
+$LightSeaGreen: LightSeaGreen; 		//#20B2AA 	RGB(32, 178, 170)
+$DarkCyan: DarkCyan; 				//#008B8B 	RGB(0, 139, 139)
+$Teal: Teal; 						//#008080 	RGB(0, 128, 128)
+
+//BLUE HTML COLOR NAMES
+$Aqua: Aqua; 						//#00FFFF 	RGB(0, 255, 255)
+$Cyan: Cyan; 						//#00FFFF 	RGB(0, 255, 255)
+$LightCyan: LightCyan; 				//#E0FFFF 	RGB(224, 255, 255)
+$PaleTurquoise: PaleTurquoise; 		//#AFEEEE 	RGB(175, 238, 238)
+$AquaMarine: AquaMarine; 			//#7FFFD4 	RGB(127, 255, 212)
+$Turquoise: Turquoise; 				//#40E0D0 	RGB(64, 224, 208)
+$MediumTurquoise: MediumTurquoise; 	//#48D1CC 	RGB(72, 209, 204)
+$DarkTurquoise: DarkTurquoise; 		//#00CED1 	RGB(0, 206, 209)
+$CadetBlue: CadetBlue; 				//#5F9EA0 	RGB(95, 158, 160)
+$SteelBlue: SteelBlue; 				//#4682B4 	RGB(70, 130, 180)
+$LightSteelBlue: LightSteelBlue; 	//#B0C4DE 	RGB(176, 196, 222)
+$PowderBlue: PowderBlue; 			//#B0E0E6 	RGB(176, 224, 230)
+$LightBlue: LightBlue; 				//#ADD8E6 	RGB(173, 216, 230)
+$SkyBlue: SkyBlue; 					//#87CEEB 	RGB(135, 206, 235)
+$LightSkyBlue: LightSkyBlue; 		//#87CEFA 	RGB(135, 206, 250)
+$DeepSkyBlue: DeepSkyBlue; 			//#00BFFF 	RGB(0, 191, 255)
+$DodgerBlue: DodgerBlue; 			//#1E90FF 	RGB(30, 144, 255)
+$CornFlowerBlue: CornFlowerBlue; 	//#6495ED 	RGB(100, 149, 237)
+$MediumSlateBlue: MediumSlateBlue; 	//#7B68EE 	RGB(123, 104, 238)
+$RoyalBlue: RoyalBlue; 				//#4169E1 	RGB(65, 105, 225)
+$Blue: Blue; 						//#0000FF 	RGB(0, 0, 255)
+$MediumBlue: MediumBlue; 			//#0000CD 	RGB(0, 0, 205)
+$DarkBlue: DarkBlue; 				//#00008B 	RGB(0, 0, 139)
+$Navy: Navy; 						//#000080 	RGB(0, 0, 128)
+$MidnightBlue: MidnightBlue; 		//#191970 	RGB(25, 25, 112)
+
+//BROWN HTML COLOR NAMES
+$CornSilk: CornSilk; 				//#FFF8DC 	RGB(255, 248, 220)
+$BlanchedAlmond: BlanchedAlmond; 	//#FFEBCD 	RGB(255, 235, 205)
+$Bisque: Bisque; 					//#FFE4C4 	RGB(255, 228, 196)
+$NavajoWhite: NavajoWhite; 			//#FFDEAD 	RGB(255, 222, 173)
+$Wheat: Wheat; 						//#F5DEB3 	RGB(245, 222, 179)
+$BurlyWood: BurlyWood; 				//#DEB887 	RGB(222, 184, 135)
+$Tan: Tan; 							//#D2B48C 	RGB(210, 180, 140)
+$RosyBrown: RosyBrown; 				//#BC8F8F 	RGB(188, 143, 143)
+$SandyBrown: SandyBrown; 			//#F4A460 	RGB(244, 164, 96)
+$GoldenRod: GoldenRod; 				//#DAA520 	RGB(218, 165, 32)
+$DarkGoldenRod: DarkGoldenRod; 		//#B8860B 	RGB(184, 134, 11)
+$Peru: Peru; 						//#CD853F 	RGB(205, 133, 63)
+$Chocolate: Chocolate; 				//#D2691E 	RGB(210, 105, 30)
+$SaddleBrown: SaddleBrown; 			//#8B4513 	RGB(139, 69, 19)
+$Sienna: Sienna; 					//#A0522D 	RGB(160, 82, 45)
+$Brown: Brown; 						//#A52A2A 	RGB(165, 42, 42)
+$Maroon: Maroon; 					//#800000 	RGB(128, 0, 0)
+
+//WHITE HTML COLOR NAMES
+$White: White; 						//#FFFFFF 	RGB(255, 255, 255)
+$Snow: Snow; 						//#FFFAFA 	RGB(255, 250, 250)
+$HoneyDew: HoneyDew; 				//#F0FFF0 	RGB(240, 255, 240)
+$MintCream: MintCream; 				//#F5FFFA 	RGB(245, 255, 250)
+$Azure: Azure; 						//#F0FFFF 	RGB(240, 255, 255)
+$AliceBlue: AliceBlue; 				//#F0F8FF 	RGB(240, 248, 255)
+$GhostWhite: GhostWhite; 			//#F8F8FF 	RGB(248, 248, 255)
+$WhiteSmoke: WhiteSmoke; 			//#F5F5F5 	RGB(245, 245, 245)
+$SeaShell: SeaShell; 				//#FFF5EE 	RGB(255, 245, 238)
+$Beige: Beige; 						//#F5F5DC 	RGB(245, 245, 220)
+$OldLace: OldLace; 					//#FDF5E6 	RGB(253, 245, 230)
+$FloralWhite: FloralWhite; 			//#FFFAF0 	RGB(255, 250, 240)
+$Ivory: Ivory; 						//#FFFFF0 	RGB(255, 255, 240)
+$AntiqueWhite: AntiqueWhite; 		//#FAEBD7 	RGB(250, 235, 215)
+$Linen: Linen; 						//#FAF0E6 	RGB(250, 240, 230)
+$LavenderBlush: LavenderBlush; 		//#FFF0F5 	RGB(255, 240, 245)
+$MistyRose: MistyRose; 				//#FFE4E1 	RGB(255, 228, 225)
+
+//GRAY HTML COLOR NAMES
+$Gainsboro: Gainsboro; 				//#DCDCDC 	RGB(220, 220, 220)
+$LightGray: LightGray; 				//#D3D3D3 	RGB(211, 211, 211)
+$Silver: Silver; 					//#C0C0C0 	RGB(192, 192, 192)
+$DarkGray: DarkGray; 				//#A9A9A9 	RGB(169, 169, 169)
+$Gray: Gray; 						//#808080 	RGB(128, 128, 128)
+$DimGray: DimGray; 					//#696969 	RGB(105, 105, 105)
+$LightSlateGray: LightSlateGray; 	//#778899 	RGB(119, 136, 153)
+$SlateGray: SlateGray; 				//#708090 	RGB(112, 128, 144)
+$DarkSlateGray: DarkSlateGray; 		//#2F4F4F 	RGB(47, 79, 79)
+$Black: Black; 						//#000000 	RGB(0, 0, 0)
+
+/***********************
+** FLAT DESIGN COLORS **
+***********************/
+
+//POMEGRANATE COLORS
+$Promegranate0: #F9EBEA; 			//249, 235, 234
+$Promegranate1: #F2D7D5; 			//242, 215, 213
+$Promegranate2: #E6B0AA; 			//230, 176, 170
+$Promegranate3: #D98880; 			//217, 136, 128
+$Promegranate4: #CD6155; 			//205, 97, 85
+$Promegranate5: #C0392B; 			//192, 57, 43
+$Promegranate6: #A93226; 			//169, 50, 38
+$Promegranate7: #922B21; 			//146, 43, 33
+$Promegranate8: #7B241C; 			//123, 36, 28
+$Promegranate9: #641E16; 			//100, 30, 22
+
+//ALIZARIN COLORS
+$Alizarin0: #FDEDEC; 				//253, 237, 236
+$Alizarin1: #FADBD8; 				//250, 219, 216
+$Alizarin2: #F5B7B1;				//245, 183, 177
+$Alizarin3: #F1948A;				//241, 148, 138
+$Alizarin4: #EC7063;				//236, 112, 99
+$Alizarin5: #E74C3C;				//231, 76, 60
+$Alizarin6: #CB4335;				//203, 67, 53
+$Alizarin7: #B03A2E;				//176, 58, 46
+$Alizarin8: #943126;				//148, 49, 38
+$Alizarin9: #78281F;				//120, 40, 31
+
+//AMETHYST COLORS
+$Amethyst0: #F5EEF8; 				//245, 238, 248
+$Amethyst1: #EBDEF0; 				//235, 222, 240
+$Amethyst2: #D7BDE2; 				//215, 189, 226
+$Amethyst3: #C39BD3; 				//195, 155, 211
+$Amethyst4: #AF7AC5; 				//175, 122, 197
+$Amethyst5: #9B59B6; 				//155, 89, 182
+$Amethyst6: #884EA0; 				//136, 78, 160
+$Amethyst7: #76448A; 				//118, 68, 138
+$Amethyst8: #633974; 				//99, 57, 116
+$Amethyst9: #512E5F; 				//81, 46, 95
+
+//WISTERIA COLORS
+$Wisteria0: #F4ECF7;				//S244, 236, 247
+$Wisteria1: #E8DAEF;				//232, 218, 239
+$Wisteria2: #D2B4DE;				//210, 180, 222
+$Wisteria3: #BB8FCE;				//187, 143, 206
+$Wisteria4: #A569BD;				//165, 105, 189
+$Wisteria5: #8E44AD;				//142, 68, 173
+$Wisteria6: #7D3C98;				//125, 60, 152
+$Wisteria7: #6C3483;				//108, 52, 131
+$Wisteria8: #5B2C6F;				//91, 44, 111
+$Wisteria9: #4A235A;				//74, 35, 90
+
+//BELIZE HOLE COLORS
+$BelizeHole0: #EAF2F8;			    //234, 242, 248
+$BelizeHole1: #D4E6F1;			    //212, 230, 241
+$BelizeHole2: #A9CCE3;		    	//169, 204, 227
+$BelizeHole3: #7FB3D5;			    //127, 179, 213
+$BelizeHole4: #5499C7;			    //84, 153, 199
+$BelizeHole5: #2980B9;			    //41, 128, 185
+$BelizeHole6: #2471A3;		    	//36, 113, 163
+$BelizeHole7: #1F618D;		    	//31, 97, 141
+$BelizeHole8: #1A5276;			    //26, 82, 118
+$BelizeHole9: #154360;			    //21, 67, 96
+
+//PETER RIVER COLORS
+$PeterRiver0: #EBF5FB;			    //235, 245, 251
+$PeterRiver1: #D6EAF8;			    //214, 234, 248
+$PeterRiver2: #AED6F1;			    //174, 214, 241
+$PeterRiver3: #85C1E9;			    //133, 193, 233
+$PeterRiver4: #5DADE2;			    //93, 173, 226
+$PeterRiver5: #3498DB;			    //52, 152, 219
+$PeterRiver6: #2E86C1;			    //46, 134, 193
+$PeterRiver7: #2874A6;			    //40, 116, 166
+$PeterRiver8: #21618C;			    //33, 97, 140
+$PeterRiver9: #1B4F72;			    //27, 79, 114
+
+//TURQUOISE COLORS
+$Turquoise0: #E8F8F5;				//232, 248, 245
+$Turquoise1: #D1F2EB;				//209, 242, 235
+$Turquoise2: #A3E4D7;				//163, 228, 215
+$Turquoise3: #76D7C4;				//118, 215, 196
+$Turquoise4: #48C9B0;				//72, 201, 176
+$Turquoise5: #1ABC9C;				//26, 188, 156
+$Turquoise6: #17A589;				//23, 165, 137
+$Turquoise7: #148F77;				//20, 143, 119
+$Turquoise8: #117864;				//17, 120, 100
+$Turquoise9: #0E6251;				//14, 98, 81
+
+//GREEN SEA COLORS
+$GreenSea0: #E8F6F3;				//232, 246, 243
+$GreenSea1: #D0ECE7;				//208, 236, 231
+$GreenSea2: #A2D9CE;				//162, 217, 206
+$GreenSea3: #73C6B6;				//115, 198, 182
+$GreenSea4: #45B39D;				//69, 179, 157
+$GreenSea5: #16A085;				//22, 160, 133
+$GreenSea6: #138D75;				//19, 141, 117
+$GreenSea7: #117A65;				//17, 122, 101
+$GreenSea8: #0E6655;				//14, 102, 85
+$GreenSea9: #0B5345;				//11, 83, 69
+
+//NEPHRITIS COLORS
+$Nephritis0: #E9F7EF;				//233, 247, 239
+$Nephritis1: #D4EFDF;				//212, 239, 223
+$Nephritis2: #A9DFBF;				//169, 223, 191
+$Nephritis3: #7DCEA0;				//125, 206, 160
+$Nephritis4: #52BE80;				//82, 190, 128
+$Nephritis5: #27AE60;				//39, 174, 96
+$Nephritis6: #229954;				//34, 153, 84
+$Nephritis7: #1E8449;				//30, 132, 73
+$Nephritis8: #196F3D;				//25, 111, 61
+$Nephritis9: #145A32;				//20, 90, 50
+
+//EMERALD COLORS
+$Emerald0: #EAFAF1;				    //234, 250, 241
+$Emerald1: #D5F5E3;				    //213, 245, 227
+$Emerald2: #ABEBC6;				    //171, 235, 198
+$Emerald3: #82E0AA;				    //130, 224, 170
+$Emerald4: #58D68D;				    //88, 214, 141
+$Emerald5: #2ECC71;				    //46, 204, 113
+$Emerald6: #28B463;				    //40, 180, 99
+$Emerald7: #239B56;				    //35, 155, 86
+$Emerald8: #1D8348;				    //29, 131, 72
+$Emerald9: #186A3B;				    //24, 106, 59
+
+//SUNFLOWER COLORS
+$Sunflower0: #FEF9E7;				//254, 249, 231
+$Sunflower1: #FCF3CF;				//252, 243, 207
+$Sunflower2: #F9E79F;				//249, 231, 159
+$Sunflower3: #F7DC6F;				//247, 220, 111
+$Sunflower4: #F4D03F;				//244, 208, 63
+$Sunflower5: #F1C40F;				//241, 196, 15
+$Sunflower6: #D4AC0D;				//212, 172, 13
+$Sunflower7: #B7950B;				//183, 149, 11
+$Sunflower8: #9A7D0A;				//154, 125, 10
+$Sunflower9: #7D6608;				//125, 102, 8
+
+//ORANGE COLORS
+$Orange0: #FEF5E7;				    //254, 245, 231
+$Orange1: #FDEBD0;				    //253, 235, 208
+$Orange2: #FAD7A0;				    //250, 215, 160
+$Orange3: #F8C471;				    //248, 196, 113
+$Orange4: #F5B041;				    //245, 176, 65
+$Orange5: #F39C12;				    //243, 156, 18
+$Orange6: #D68910;				    //214, 137, 16
+$Orange7: #B9770E;				    //185, 119, 14
+$Orange8: #9C640C;				    //156, 100, 12
+$Orange9: #7E5109;				    //126, 81, 9
+
+//CARROT COLORS
+$Carrot0: #FDF2E9;				    //253, 242, 233
+$Carrot1: #FAE5D3;				    //250, 229, 211
+$Carrot2: #F5CBA7;				    //245, 203, 167
+$Carrot3: #F0B27A;				    //240, 178, 122
+$Carrot4: #EB984E;				    //235, 152, 78
+$Carrot5: #E67E22;				    //230, 126, 34
+$Carrot6: #CA6F1E;				    //202, 111, 30
+$Carrot7: #AF601A;				    //175, 96, 26
+$Carrot8: #935116;				    //147, 81, 22
+$Carrot9: #784212;				    //120, 66, 18
+
+//PUMPKIN COLORS
+$Pumpkin0: #FBEEE6;				    //251, 238, 230
+$Pumpkin1: #F6DDCC;				    //246, 221, 204
+$Pumpkin2: #EDBB99;				    //237, 187, 153
+$Pumpkin3: #E59866;				    //229, 152, 102
+$Pumpkin4: #DC7633;				    //220, 118, 51
+$Pumpkin5: #D35400;				    //211, 84, 0
+$Pumpkin6: #BA4A00;				    //186, 74, 0
+$Pumpkin7: #A04000;				    //160, 64, 0
+$Pumpkin8: #873600;				    //135, 54, 0
+$Pumpkin9: #6E2C00;				    //110, 44, 0
+
+//CLOUDS COLORS
+$Clouds0: #FDFEFE;				    //253, 254, 254
+$Clouds1: #FBFCFC;				    //251, 252, 252
+$Clouds2: #F7F9F9;				    //247, 249, 249
+$Clouds3: #F4F6F7;				    //244, 246, 247
+$Clouds4: #F0F3F4;				    //240, 243, 244
+$Clouds5: #ECF0F1;				    //236, 240, 241
+$Clouds6: #D0D3D4;				    //208, 211, 212
+$Clouds7: #B3B6B7;				    //179, 182, 183
+$Clouds8: #979A9A;				    //151, 154, 154
+$Clouds9: #7B7D7D;				    //123, 125, 125
+
+//SILVER COLORS
+$Silver0: #F8F9F9;				    //248, 249, 249
+$Silver1: #F2F3F4;				    //242, 243, 244
+$Silver2: #E5E7E9;				    //229, 231, 233
+$Silver3: #D7DBDD;				    //215, 219, 221
+$Silver4: #CACFD2;				    //202, 207, 210
+$Silver5: #BDC3C7;				    //189, 195, 199
+$Silver6: #A6ACAF;				    //166, 172, 175
+$Silver7: #909497;				    //144, 148, 151
+$Silver8: #797D7F;				    //121, 125, 127
+$Silver9: #626567;				    //98, 101, 103
+
+//CONCRETE COLORS
+$Concrete0: #F4F6F6;				//244, 246, 246
+$Concrete1: #EAEDED;				//234, 237, 237
+$Concrete2: #D5DBDB;				//213, 219, 219
+$Concrete3: #BFC9CA;				//191, 201, 202
+$Concrete4: #AAB7B8;				//170, 183, 184
+$Concrete5: #95A5A6;				//149, 165, 166
+$Concrete6: #839192;				//131, 145, 146
+$Concrete7: #717D7E;				//113, 125, 126
+$Concrete8: #5F6A6A;				//95, 106, 106
+$Concrete9: #4D5656;				//77, 86, 86
+
+//ASBESTOS COLORS
+$Asbestos0: #F2F4F4;				//242, 244, 244
+$Asbestos1: #E5E8E8;				//229, 232, 232
+$Asbestos2: #CCD1D1;				//204, 209, 209
+$Asbestos3: #B2BABB;				//178, 186, 187
+$Asbestos4: #99A3A4;				//153, 163, 164
+$Asbestos5: #7F8C8D;				//127, 140, 141
+$Asbestos6: #707B7C;				//112, 123, 124
+$Asbestos7: #616A6B;				//97, 106, 107
+$Asbestos8: #515A5A;				//81, 90, 90
+$Asbestos9: #424949;				//66, 73, 73
+
+//WET ASPHALT COLORS
+$WetAsphalt0: #EBEDEF;			    //235, 237, 239
+$WetAsphalt1: #D6DBDF;			    //214, 219, 223
+$WetAsphalt2: #AEB6BF;			    //174, 182, 191
+$WetAsphalt3: #85929E;			    //133, 146, 158
+$WetAsphalt4: #5D6D7E;			    //93, 109, 126
+$WetAsphalt5: #34495E;			    //52, 73, 94
+$WetAsphalt6: #2E4053;			    //46, 64, 83
+$WetAsphalt7: #283747;			    //40, 55, 71
+$WetAsphalt8: #212F3C;			    //33, 47, 60
+$WetAsphalt9: #1B2631;			    //27, 38, 49
+
+//MIDNIGHT BLUE COLORS
+$MidnightBlue0: #EAECEE;			//234, 236, 238
+$MidnightBlue1: #D5D8DC;			//213, 216, 220
+$MidnightBlue2: #ABB2B9;			//171, 178, 185
+$MidnightBlue3: #808B96;			//128, 139, 150
+$MidnightBlue4: #566573;			//86, 101, 115
+$MidnightBlue5: #2C3E50;			//44, 62, 80
+$MidnightBlue6: #273746;			//39, 55, 70
+$MidnightBlue7: #212F3D;			//33, 47, 61
+$MidnightBlue8: #1C2833;			//28, 40, 51
+$MidnightBlue9: #17202A;			//23, 32, 42
+
+/***************************
+** MATERIAL DESIGN COLORS **
+***************************/
+//RED COLORS
+$RedA: #FFEBEE;					    //255, 235, 238
+$RedB: #FFCDD2;					    //255, 205, 210
+$RedC: #EF9A9A;					    //239, 154, 154
+$RedD: #E57373;					    //229, 115, 115
+$RedE: #EF5350;					    //239, 83, 80
+$RedF: #F44336;					    //244, 67, 54
+$RedG: #E53935;					    //229, 57, 53
+$RedH: #D32F2F;					    //211, 47, 47
+$RedI: #C62828;					    //198, 40, 40
+$RedJ: #B71C1C;					    //183, 28, 28
+$RedK: #FF8A80;					    //255, 138, 128
+$RedL: #FF5252;					    //255, 82, 82
+$RedM: #FF1744;					    //255, 23, 68
+$RedN: #D50000;					    //213, 0, 0
+
+//PINK COLORS
+$PinkA: #FCE4EC;					//252, 228, 236
+$PinkB: #F8BBD0;					//248, 187, 208
+$PinkC: #F48FB1;					//244, 143, 177
+$PinkD: #F06292;					//240, 98, 146
+$PinkE: #EC407A;					//236, 64, 122
+$PinkF: #E91E63;					//233, 30, 99
+$PinkG: #D81B60;					//216, 27, 96
+$PinkH: #C2185B;					//194, 24, 91
+$PinkI: #AD1457;					//173, 20, 87
+$PinkJ: #880E4F;					//136, 14, 79
+$PinkK: #FF80AB;					//255, 128, 171
+$PinkL: #FF4081;					//255, 64, 129
+$PinkM: #F50057;					//245, 0, 87
+$PinkN: #C51162;					//197, 17, 98
+
+//PURPLE COLORS
+$PurpleA: #F3E5F5;				    //243, 229, 245
+$PurpleB: #E1BEE7;				    //225, 190, 231
+$PurpleC: #CE93D8;				    //206, 147, 216
+$PurpleD: #BA68C8;				    //186, 104, 200
+$PurpleE: #AB47BC;				    //171, 71, 188
+$PurpleF: #9C27B0;				    //156, 39, 176
+$PurpleG: #8E24AA;				    //142, 36, 170
+$PurpleH: #7B1FA2;				    //123, 31, 162
+$PurpleI: #6A1B9A;				    //106, 27, 154
+$PurpleJ: #4A148C;				    //74, 20, 140
+$PurpleK: #EA80FC;				    //234, 128, 252
+$PurpleL: #E040FB;				    //224, 64, 251
+$PurpleM: #D500F9;				    //213, 0, 249
+$PurpleN: #AA00FF;				    //170, 0, 255
+
+//DEEP PURPLE COLORS
+$DeepPurpleA: #EDE7F6;				//237, 231, 246
+$DeepPurpleB: #D1C4E9;				//209, 196, 233
+$DeepPurpleC: #B39DDB;				//179, 157, 219
+$DeepPurpleD: #9575CD;				//149, 117, 205
+$DeepPurpleE: #7E57C2;				//126, 87, 194
+$DeepPurpleF: #673AB7;				//103, 58, 183
+$DeepPurpleG: #5E35B1;				//94, 53, 177
+$DeepPurpleH: #512DA8;				//81, 45, 168
+$DeepPurpleI: #4527A0;				//69, 39, 160
+$DeepPurpleJ: #311B92;				//49, 27, 146
+$DeepPurpleK: #B388FF;				//179, 136, 255
+$DeepPurpleL: #7C4DFF;				//124, 77, 255
+$DeepPurpleM: #651FFF;				//101, 31, 255
+$DeepPurpleN: #6200EA;				//98, 0, 234
+
+//INDIGO COLORS
+$IndigoA: #E8EAF6;					//232, 234, 246
+$IndigoB: #C5CAE9;					//197, 202, 233
+$IndigoC: #9FA8DA;					//159, 168, 218
+$IndigoD: #7986CB;					//121, 134, 203
+$IndigoE: #5C6BC0;					//92, 107, 192
+$IndigoF: #3F51B5;					//63, 81, 181
+$IndigoG: #3949AB;					//57, 73, 171
+$IndigoH: #303F9F;					//48, 63, 159
+$IndigoI: #283593;					//40, 53, 147
+$IndigoJ: #1A237E;					//26, 35, 126
+$IndigoK: #8C9EFF;					//140, 158, 255
+$IndigoL: #536DFE;					//83, 109, 254
+$IndigoM: #3D5AFE;					//61, 90, 254
+$IndigoN: #304FFE;					//48, 79, 254
+
+//BLUE COLORS
+$BlueA: #E3F2FD;					//227, 242, 253
+$BlueB: #BBDEFB;					//187, 222, 251
+$BlueC: #90CAF9;					//144, 202, 249
+$BlueD: #64B5F6;					//100, 181, 246
+$BlueE: #42A5F5;					//66, 165, 245
+$BlueF: #2196F3;					//33, 150, 243
+$BlueG: #1E88E5;					//30, 136, 229
+$BlueH: #1976D2;					//25, 118, 210
+$BlueI: #1565C0;					//21, 101, 192
+$BlueJ: #0D47A1;					//13, 71, 161
+$BlueK: #82B1FF;					//130, 177, 255
+$BlueL: #448AFF;					//68, 138, 255
+$BlueM: #2979FF;					//41, 121, 255
+$BlueN: #2962FF;					//41, 98, 255
+
+//LIGHT BLUE COLORS
+$LightBlueA: #E1F5FE;				//225, 245, 254
+$LightBlueB: #B3E5FC;				//179, 229, 252
+$LightBlueC: #81D4FA;				//129, 212, 250
+$LightBlueD: #4FC3F7;				//79, 195, 247
+$LightBlueE: #29B6F6;				//41, 182, 246
+$LightBlueF: #03A9F4;				//3, 169, 244
+$LightBlueG: #039BE5;				//3, 155, 229
+$LightBlueH: #0288D1;				//2, 136, 209
+$LightBlueI: #0277BD;				//2, 119, 189
+$LightBlueJ: #01579B;				//1, 87, 155
+$LightBlueK: #80D8FF;				//128, 216, 255
+$LightBlueL: #40C4FF;				//64, 196, 255
+$LightBlueM: #00B0FF;				//0, 176, 255
+$LightBlueN: #0091EA;				//0, 145, 234
+
+//CYAN COLORS
+$CyanA: #E0F7FA;					//224, 247, 250
+$CyanB: #B2EBF2;					//178, 235, 242
+$CyanC: #80DEEA;					//128, 222, 234
+$CyanD: #4DD0E1;					//77, 208, 225
+$CyanE: #26C6DA;					//38, 198, 218
+$CyanF: #00BCD4;					//0, 188, 212
+$CyanG: #00ACC1;					//0, 172, 193
+$CyanH: #0097A7;					//0, 151, 167
+$CyanI: #00838F;					//0, 131, 143
+$CyanJ: #006064;					//0, 96, 100
+$CyanK: #84FFFF;					//132, 255, 255
+$CyanL: #18FFFF;					//24, 255, 255
+$CyanM: #00E5FF;					//0, 229, 255
+$CyanN: #00B8D4;					//0, 184, 212
+
+//TEAL COLORS
+$TealA: #E0F2F1;					//224, 242, 241
+$TealB: #B2DFDB;					//178, 223, 219
+$TealC: #80CBC4;					//128, 203, 196
+$TealD: #4DB6AC;					//77, 182, 172
+$TealE: #26A69A;					//38, 166, 154
+$TealF: #009688;					//0, 150, 136
+$TealG: #00897B;					//0, 137, 123
+$TealH: #00796B;					//0, 121, 107
+$TealI: #00695C;					//0, 105, 92
+$TealJ: #004D40;					//0, 77, 64
+$TealK: #A7FFEB;					//167, 255, 235
+$TealL: #64FFDA;					//100, 255, 218
+$TealM: #1DE9B6;					//29, 233, 182
+$TealN: #00BFA5;					//0, 191, 165
+
+//GREEN COLORS
+$GreenA: #E8F5E9;					//232, 245, 233
+$GreenB: #C8E6C9;					//200, 230, 201
+$GreenC: #A5D6A7;					//165, 214, 167
+$GreenD: #81C784;					//129, 199, 132
+$GreenE: #66BB6A;					//102, 187, 106
+$GreenF: #4CAF50;					//76, 175, 80
+$GreenG: #43A047;					//67, 160, 71
+$GreenH: #388E3C;					//56, 142, 60
+$GreenI: #2E7D32;					//46, 125, 50
+$GreenJ: #1B5E20;					//27, 94, 32
+$GreenK: #B9F6CA;					//185, 246, 202
+$GreenL: #69F0AE;					//105, 240, 174
+$GreenM: #00E676;					//0, 230, 118
+$GreenN: #00C853;					//0, 200, 83
+
+//LIGHT GREEN COLORS
+$LightGreenA: #F1F8E9;				//241, 248, 233
+$LightGreenB: #DCEDC8;				//220, 237, 200
+$LightGreenC: #C5E1A5;				//197, 225, 165
+$LightGreenD: #AED581;				//174, 213, 129
+$LightGreenE: #9CCC65;				//156, 204, 101
+$LightGreenF: #8BC34A;				//139, 195, 74
+$LightGreenG: #7CB342;				//124, 179, 66
+$LightGreenH: #689F38;				//104, 159, 56
+$LightGreenI: #558B2F;				//85, 139, 47
+$LightGreenJ: #33691E;				//51, 105, 30
+$LightGreenK: #CCFF90;				//204, 255, 144
+$LightGreenL: #B2FF59;				//178, 255, 89
+$LightGreenM: #76FF03;				//118, 255, 3
+$LightGreenN: #64DD17;				//100, 221, 23
+
+//LIME COLORS
+$LimeA: #F9FBE7;					//249, 251, 231
+$LimeB: #F0F4C3;					//240, 244, 195
+$LimeC: #E6EE9C;					//230, 238, 156
+$LimeD: #DCE775;					//220, 231, 117
+$LimeE: #D4E157;					//212, 225, 87
+$LimeF: #CDDC39;					//205, 220, 57
+$LimeG: #C0CA33;					//192, 202, 51
+$LimeH: #AFB42B;					//175, 180, 43
+$LimeI: #9E9D24;					//158, 157, 36
+$LimeJ: #827717;					//130, 119, 23
+$LimeK: #F4FF81;					//244, 255, 129
+$LimeL: #EEFF41;					//238, 255, 65
+$LimeM: #C6FF00;					//198, 255, 0
+$LimeN: #AEEA00;					//174, 234, 0
+
+//YELLOW COLORS
+$YellowA: #FFFDE7;					//255, 253, 231
+$YellowB: #FFF9C4;					//255, 249, 196
+$YellowC: #FFF59D;					//255, 245, 157
+$YellowD: #FFF176;					//255, 241, 118
+$YellowE: #FFEE58;					//255, 238, 88
+$YellowF: #FFEB3B;					//255, 235, 59
+$YellowG: #FDD835;					//253, 216, 53
+$YellowH: #FBC02D;					//251, 192, 45
+$YellowI: #F9A825;					//249, 168, 37
+$YellowJ: #F57F17;					//245, 127, 23
+$YellowK: #FFFF8D;					//255, 255, 141
+$YellowL: #FFFF00;					//255, 255, 0
+$YellowM: #FFEA00;					//255, 234, 0
+$YellowN: #FFD600;					//255, 214, 0
+
+//AMBER COLORS
+$AmberA: #FFF8E1;					//255, 248, 225
+$AmberB: #FFECB3;					//255, 236, 179
+$AmberC: #FFE082;					//255, 224, 130
+$AmberD: #FFD54F;					//255, 213, 79
+$AmberE: #FFCA28;					//255, 202, 40
+$AmberF: #FFC107;					//255, 193, 7
+$AmberG: #FFB300;					//255, 179, 0
+$AmberH: #FFA000;					//255, 160, 0
+$AmberI: #FF8F00;					//255, 143, 0
+$AmberJ: #FF6F00;					//255, 111, 0
+$AmberK: #FFE57F;					//255, 229, 127
+$AmberL: #FFD740;					//255, 215, 64
+$AmberM: #FFC400;					//255, 196, 0
+$AmberN: #FFAB00;					//255, 171, 0
+
+//ORANGE COLORS
+$OrangeA: #FFF3E0;					//255, 243, 224
+$OrangeB: #FFE0B2;					//255, 224, 178
+$OrangeC: #FFCC80;					//255, 204, 128
+$OrangeD: #FFB74D;					//255, 183, 77
+$OrangeE: #FFA726;					//255, 167, 38
+$OrangeF: #FF9800;					//255, 152, 0
+$OrangeG: #FB8C00;					//251, 140, 0
+$OrangeH: #F57C00;					//245, 124, 0
+$OrangeI: #EF6C00;					//239, 108, 0
+$OrangeJ: #E65100;					//230, 81, 0
+$OrangeK: #FFD180;					//255, 209, 128
+$OrangeL: #FFAB40;					//255, 171, 64
+$OrangeM: #FF9100;					//255, 145, 0
+$OrangeN: #FF6D00;					//255, 109, 0
+
+//DEEP ORANGE COLORS
+$DeepOrangeA: #FBE9E7;				//251, 233, 231
+$DeepOrangeB: #FFCCBC;				//255, 204, 188
+$DeepOrangeC: #FFAB91;				//255, 171, 145
+$DeepOrangeD: #FF8A65;				//255, 138, 101
+$DeepOrangeE: #FF7043;				//255, 112, 67
+$DeepOrangeF: #FF5722;				//255, 87, 34
+$DeepOrangeG: #F4511E;				//244, 81, 30
+$DeepOrangeH: #E64A19;				//230, 74, 25
+$DeepOrangeI: #D84315;				//216, 67, 21
+$DeepOrangeJ: #BF360C;				//191, 54, 12
+$DeepOrangeK: #FF9E80;				//255, 158, 128
+$DeepOrangeL: #FF6E40;				//255, 110, 64
+$DeepOrangeM: #FF3D00;				//255, 61, 0
+$DeepOrangeN: #DD2C00;				//221, 44, 0
+
+//BROWN COLORS
+$BrownA: #EFEBE9;					//239, 235, 233
+$BrownB: #D7CCC8;					//215, 204, 200
+$BrownC: #BCAAA4;					//188, 170, 164
+$BrownD: #A1887F;					//161, 136, 127
+$BrownE: #8D6E63;					//141, 110, 99
+$BrownF: #795548;					//121, 85, 72
+$BrownG: #6D4C41;					//109, 76, 65
+$BrownH: #5D4037;					//93, 64, 55
+$BrownI: #4E342E;					//78, 52, 46
+$BrownJ: #3E2723;					//62, 39, 35
+
+//GREY COLORS
+$GreyA: #FAFAFA;					//250, 250, 250
+$GreyB: #F5F5F5;					//245, 245, 245
+$GreyC: #EEEEEE;					//238, 238, 238
+$GreyD: #E0E0E0;					//224, 224, 224
+$GreyE: #BDBDBD;					//189, 189, 189
+$GreyF: #9E9E9E;					//158, 158, 158
+$GreyG: #757575;					//117, 117, 117
+$GreyH: #616161;					//97, 97, 97
+$GreyI: #424242;					//66, 66, 66
+$GreyJ: #212121;					//33, 33, 33
+
+//BLUE GREY COLORS
+$BlueGreyA: #ECEFF1;				//236, 239, 241
+$BlueGreyB: #CFD8DC;				//207, 216, 220
+$BlueGreyC: #B0BEC5;				//176, 190, 197
+$BlueGreyD: #90A4AE;				//144, 164, 174
+$BlueGreyE: #78909C;				//120, 144, 156
+$BlueGreyF: #607D8B;				//96, 125, 139
+$BlueGreyG: #546E7A;				//84, 110, 122
+$BlueGreyH: #455A64;				//69, 90, 100
+$BlueGreyI: #37474F;				//55, 71, 79
+$BlueGreyJ: #263238;				//38, 50, 56
+
+/********************
+** WEB SAFE COLORS **
+********************/
+$Safe1: #CCFF00;				    //204, 255, 0
+$Safe2: #CCFF33;				    //204, 255, 51
+$Safe3: #CCFF66;				    //204, 255, 102
+$Safe4: #CCFF99;				    //204, 255, 153
+$Safe5: #CCFFCC;				    //204, 255, 204
+$Safe6: #CCFFFF;				    //204, 255, 255
+$Safe7: #FFFFFF;				    //255, 255, 255
+$Safe8: #FFFFCC;				    //255, 255, 204
+$Safe9: #FFFF99;				    //255, 255, 153
+$Safe10: #FFFF66;				    //255, 255, 102
+$Safe11: #FFFF33;				    //255, 255, 51
+$Safe12: #FFFF00;				    //255, 255, 0
+
+$Safe13: #CCCC00;				    //204, 204, 0
+$Safe14: #CCCC33;				    //204, 204, 51
+$Safe15: #CCCC66;				    //204, 204, 102
+$Safe16: #CCCC99;				    //204, 204, 153
+$Safe17: #CCCCCC;				    //204, 204, 204
+$Safe18: #CCCCFF;				    //204, 204, 255
+$Safe19: #FFCCFF;				    //255, 204, 255
+$Safe20: #FFCCCC;				    //255, 204, 204
+$Safe21: #FFCC99;				    //255, 204, 153
+$Safe22: #FFCC66;				    //255, 204, 102
+$Safe23: #FFCC33;				    //255, 204, 51
+$Safe24: #FFCC00;				    //255, 204, 0
+
+$Safe25: #CC9900;				    //204, 153, 0
+$Safe26: #CC9933;				    //204, 153, 51
+$Safe27: #CC9966;				    //204, 153, 102
+$Safe28: #CC9999;				    //204, 153, 153
+$Safe29: #CC99CC;				    //204, 153, 204
+$Safe30: #CC99FF;				    //204, 153, 255
+$Safe31: #FF99FF;				    //255, 153, 255
+$Safe32: #FF99CC;				    //255, 153, 204
+$Safe33: #FF9999;				    //255, 153, 153
+$Safe34: #FF9966;				    //255, 153, 102
+$Safe35: #FF9933;				    //255, 153, 51
+$Safe36: #FF9900;				    //255, 153, 0
+
+$Safe37: #CC6600;				    //204, 102, 0
+$Safe38: #CC6633;				    //204, 102, 51
+$Safe39: #CC6666;				    //204, 102, 102
+$Safe40: #CC6699;				    //204, 102, 153
+$Safe41: #CC66CC;				    //204, 102, 204
+$Safe42: #CC66FF;				    //204, 102, 255
+$Safe43: #FF66FF;				    //255, 102, 255
+$Safe44: #FF66CC;				    //255, 102, 204
+$Safe45: #FF6699;				    //255, 102, 153
+$Safe46: #FF6666;				    //255, 102, 102
+$Safe47: #FF6633;				    //255, 102, 51
+$Safe48: #FF6600;				    //255, 102, 0
+
+$Safe49: #CC3300;				    //204, 51, 0
+$Safe50: #CC3333;				    //204, 51, 51
+$Safe51: #CC3366;				    //204, 51, 102
+$Safe52: #CC3399;				    //204, 51, 153
+$Safe53: #CC33CC;				    //204, 51, 204
+$Safe54: #CC33FF;				    //204, 51, 255
+$Safe55: #FF33FF;				    //255, 51, 255
+$Safe56: #FF33CC;				    //255, 51, 204
+$Safe57: #FF3399;				    //255, 51, 153
+$Safe58: #FF3366;				    //255, 51, 102
+$Safe59: #FF3333;				    //255, 51, 51
+$Safe60: #FF3300;				    //255, 51, 0
+
+$Safe61: #CC0000;				    //204, 0, 0
+$Safe62: #CC0033;				    //204, 0, 51
+$Safe63: #CC0066;				    //204, 0, 102
+$Safe64: #CC0099;				    //204, 0, 153
+$Safe65: #CC00CC;				    //204, 0, 204
+$Safe66: #CC00FF;				    //204, 0, 255
+$Safe67: #FF00FF;				    //255, 0, 255
+$Safe68: #FF00CC;				    //255, 0, 204
+$Safe69: #FF0099;				    //255, 0, 153
+$Safe70: #FF0066;				    //255, 0, 102
+$Safe71: #FF0033;				    //255, 0, 51
+$Safe72: #FF0000;				    //255, 0, 0
+
+$Safe73: #660000;				    //102, 0, 0
+$Safe74: #660033;				    //102, 0, 51
+$Safe75: #660066;				    //102, 0, 102
+$Safe76: #660099;				    //102, 0, 153
+$Safe77: #6600CC;				    //102, 0, 204
+$Safe78: #6600FF;				    //102, 0, 255
+$Safe79: #9900FF;				    //153, 0, 255
+$Safe80: #9900CC;				    //153, 0, 204
+$Safe81: #990099;				    //153, 0, 153
+$Safe82: #990066;				    //153, 0, 102
+$Safe83: #990033;				    //153, 0, 51
+$Safe84: #990000;				    //153, 0, 0
+
+$Safe85: #663300;				    //102, 51, 0
+$Safe86: #663333;				    //102, 51, 51
+$Safe87: #663366;				    //102, 51, 102
+$Safe88: #663399;				    //102, 51, 153
+$Safe89: #6633CC;				    //102, 51, 204
+$Safe90: #6633FF;				    //102, 51, 255
+$Safe91: #9933FF;				    //153, 51, 255
+$Safe92: #9933CC;				    //153, 51, 204
+$Safe93: #993399;				    //153, 51, 153
+$Safe94: #993366;				    //153, 51, 102
+$Safe95: #993333;				    //153, 51, 51
+$Safe96: #993300;				    //153, 51, 0
+
+$Safe97: #666600;				    //102, 102, 0
+$Safe98: #666633;				    //102, 102, 51
+$Safe99: #666666;				    //102, 102, 102
+$Safe100: #666699;				    //102, 102, 153
+$Safe101: #6666CC;				    //102, 102, 204
+$Safe102: #6666FF;				    //102, 102, 255
+$Safe103: #9966FF;				    //153, 102, 255
+$Safe104: #9966CC;				    //153, 102, 204
+$Safe105: #996699;				    //153, 102, 153
+$Safe106: #996666;				    //153, 102, 102
+$Safe107: #996633;				    //153, 102, 51
+$Safe108: #996600;				    //153, 102, 0
+
+$Safe109: #669900;				    //102, 153, 0
+$Safe110: #669933;				    //102, 153, 51
+$Safe111: #669966;				    //102, 153, 102
+$Safe112: #669999;				    //102, 153, 153
+$Safe113: #6699CC;				    //102, 153, 204
+$Safe114: #6699FF;				    //102, 153, 255
+$Safe115: #9999FF;				    //153, 153, 255
+$Safe116: #9999CC;				    //153, 153, 204
+$Safe117: #999999;				    //153, 153, 153
+$Safe118: #999966;				    //153, 153, 102
+$Safe119: #999933;				    //153, 153, 51
+$Safe120: #999900;				    //153, 153, 0
+
+$Safe121: #66CC00;				    //102, 204, 0
+$Safe122: #66CC33;				    //102, 204, 51
+$Safe123: #66CC66;				    //102, 204, 102
+$Safe124: #66CC99;				    //102, 204, 153
+$Safe125: #66CCCC;				    //102, 204, 204
+$Safe126: #66CCFF;				    //102, 204, 255
+$Safe127: #99CCFF;				    //153, 204, 255
+$Safe128: #99CCCC;				    //153, 204, 204
+$Safe129: #99CC99;				    //153, 204, 153
+$Safe130: #99CC66;				    //153, 204, 102
+$Safe131: #99CC33;				    //153, 204, 51
+$Safe132: #99CC00;				    //153, 204, 0
+
+$Safe133: #66FF00;				    //102, 255, 0
+$Safe134: #66FF33;				    //102, 255, 51
+$Safe135: #66FF66;				    //102, 255, 102
+$Safe136: #66FF99;				    //102, 255, 153
+$Safe137: #66FFCC;				    //102, 255, 204
+$Safe138: #66FFFF;				    //102, 255, 255
+$Safe139: #99FFFF;				    //153, 255, 255
+$Safe140: #99FFCC;				    //153, 255, 204
+$Safe141: #99FF99;				    //153, 255, 153
+$Safe142: #99FF66;				    //153, 255, 102
+$Safe143: #99FF33;				    //153, 255, 51
+$Safe144: #99FF00;				    //153, 255, 0
+
+$Safe145: #00FF00;				    //0, 255, 0
+$Safe146: #00FF33;				    //0, 255, 51
+$Safe147: #00FF66;				    //0, 255, 102
+$Safe148: #00FF99;				    //0, 255, 153
+$Safe149: #00FFCC;				    //0, 255, 204
+$Safe150: #00FFFF;				    //0, 255, 255
+$Safe151: #33FFFF;				    //51, 255, 255
+$Safe152: #33FFCC;				    //51, 255, 204
+$Safe153: #33FF99;				    //51, 255, 153
+$Safe154: #33FF66;				    //51, 255, 102
+$Safe155: #33FF33;				    //51, 255, 51
+$Safe156: #33FF00;				    //51, 255, 0
+
+$Safe157: #00CC00;				    //0, 204, 0
+$Safe158: #00CC33;				    //0, 204, 51
+$Safe159: #00CC66;				    //0, 204, 102
+$Safe160: #00CC99;				    //0, 204, 153
+$Safe161: #00CCCC;				    //0, 204, 204
+$Safe162: #00CCFF;				    //0, 204, 255
+$Safe163: #33CCFF;				    //51, 204, 255
+$Safe164: #33CCCC;				    //51, 204, 204
+$Safe165: #33CC99;				    //51, 204, 153
+$Safe166: #33CC66;				    //51, 204, 102
+$Safe167: #33CC33;				    //51, 204, 51
+$Safe168: #33CC00;				    //51, 204, 0
+
+$Safe169: #009900;				    //0, 153, 0
+$Safe170: #009933;				    //0, 153, 51
+$Safe171: #009966;				    //0, 153, 102
+$Safe172: #009999;				    //0, 153, 153
+$Safe173: #0099CC;				    //0, 153, 204
+$Safe174: #0099FF;				    //0, 153, 255
+$Safe175: #3399FF;				    //51, 153, 255
+$Safe176: #3399CC;				    //51, 153, 204
+$Safe177: #339999;				    //51, 153, 153
+$Safe178: #339966;				    //51, 153, 102
+$Safe179: #339933;				    //51, 153, 51
+$Safe180: #339900;				    //51, 153, 0
+
+$Safe182: #006600;				    //0, 102, 0
+$Safe183: #006633;				    //0, 102, 51
+$Safe184: #006666;				    //0, 102, 102
+$Safe185: #006699;				    //0, 102, 153
+$Safe186: #0066CC;				    //0, 102, 204
+$Safe187: #0066FF;				    //0, 102, 255
+$Safe188: #3366FF;				    //51, 102, 255
+$Safe189: #3366CC;				    //51, 102, 204
+$Safe190: #336699;				    //51, 102, 153
+$Safe191: #336666;				    //51, 102, 102
+$Safe192: #336633;				    //51, 102, 51
+$Safe193: #336600;				    //51, 102, 0
+
+$Safe194: #003300;				    //0, 51, 0
+$Safe195: #003333;				    //0, 51, 51
+$Safe196: #003366;				    //0, 51, 102
+$Safe197: #003399;				    //0, 51, 153
+$Safe198: #0033CC;				    //0, 51, 204
+$Safe199: #0033FF;				    //0, 51, 255
+$Safe200: #3333FF;				    //51, 51, 255
+$Safe201: #3333CC;				    //51, 51, 204
+$Safe202: #333399;				    //51, 51, 153
+$Safe203: #333366;				    //51, 51, 102
+$Safe204: #333333;				    //51, 51, 51
+$Safe205: #333300;				    //51, 51, 0
+
+$Safe206: #000000;				    //0, 0, 0
+$Safe207: #000033;				    //0, 0, 51
+$Safe208: #000066;				    //0, 0, 102
+$Safe209: #000099;				    //0, 0, 153
+$Safe210: #0000CC;				    //0, 0, 204
+$Safe211: #0000FF;				    //0, 0, 255
+$Safe212: #3300FF;				    //51, 0, 255
+$Safe213: #3300CC;				    //51, 0, 204
+$Safe214: #330099;				    //51, 0, 153
+$Safe215: #330066;				    //51, 0, 102
+$Safe216: #330033;				    //1, 0, 51
+$Safe217: #330000;				    //51, 0, 0

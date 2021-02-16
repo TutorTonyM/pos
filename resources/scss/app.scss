@@ -2,17 +2,18 @@
 // @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 /***** Gobals *****/
-// @import "colors";
-// @import "mixins";
-// @import "extends";
+@import "globales/colors";
+@import "globales/extends";
+@import "globales/mixins";
 
 /***** External Libraries *****/
 
 
 /***** Themes *****/
-// @import 'main-theme-core';
+@import 'temas/tablero-simple/tablero-simple-colores';
+@import 'temas/tablero-simple/tablero-simple-central';
 // @import 'main-theme-colors';
 // @import 'main-theme-fomrs';
 
 /***** Styles *****/
-// @import 'style';
+// @import 'tablero';
