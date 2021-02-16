@@ -31,6 +31,7 @@
     <body>
         <div id="tablero">
             @include('tablero.es.parciales.barra-de-navegacion')
+            @include('tablero.es.parciales.barra-de-control')
 
             <main>                
                 {{--@include('tablero.es.parciales.alertas-basicas')--}}

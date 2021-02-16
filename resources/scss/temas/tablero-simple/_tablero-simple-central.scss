@@ -1,5 +1,17 @@
+$anchoDeBarra: 200px;
+
 #tablero{
     main{
         padding-top: 60px;
+        margin-left: $anchoDeBarra;
+    }
+
+    #barra-de-navegacion{
+        position: absolute;
+        padding-top: 60px;
+        width: $anchoDeBarra;
+        height: 100vh;
+        background-color: $white;
+        border-right: $light 3px solid;
     }
 }

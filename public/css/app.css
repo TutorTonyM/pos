@@ -16,6 +16,15 @@
 /***** Themes *****/
 #tablero main {
   padding-top: 60px;
+  margin-left: 200px;
+}
+#tablero #barra-de-navegacion {
+  position: absolute;
+  padding-top: 60px;
+  width: 200px;
+  height: 100vh;
+  background-color: #FFFFFF;
+  border-right: #EEEEEE 3px solid;
 }
 
 /***** Styles *****/
