@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return 'welcome!!!';
-});
+    return view('tablero.es.tablero');
+})->name('tablero');
 
 require __DIR__.'/auth.php';

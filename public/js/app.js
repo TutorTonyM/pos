@@ -7,8 +7,8 @@
   \*****************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-windoe.$ = windoe.jQuery = __webpack_require__.e(/*! import() */ "node_modules_jquery_dist_jquery_js").then(__webpack_require__.t.bind(__webpack_require__, /*! jquery */ "./node_modules/jquery/dist/jquery.js", 23));
-windoe.popper = __webpack_require__.e(/*! import() */ "node_modules_popper_js_dist_esm_popper_js").then(__webpack_require__.bind(__webpack_require__, /*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js"));
+window.$ = window.jQuery = __webpack_require__.e(/*! import() */ "node_modules_jquery_dist_jquery_js").then(__webpack_require__.t.bind(__webpack_require__, /*! jquery */ "./node_modules/jquery/dist/jquery.js", 23));
+window.popper = __webpack_require__.e(/*! import() */ "node_modules_popper_js_dist_esm_popper_js").then(__webpack_require__.bind(__webpack_require__, /*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js"));
 __webpack_require__.e(/*! import() */ "node_modules_bootstrap_dist_js_bootstrap_js").then(__webpack_require__.t.bind(__webpack_require__, /*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js", 23));
 
 /***/ }),

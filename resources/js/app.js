@@ -1,3 +1,3 @@
-windoe.$ = windoe.jQuery = import('jquery');
-windoe.popper = import('popper.js');
+window.$ = window.jQuery = import('jquery');
+window.popper = import('popper.js');
 import('bootstrap');
