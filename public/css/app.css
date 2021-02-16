@@ -1,4 +1,5 @@
 /***** Fonts *****/
+/***** External Libraries *****/
 /***** Gobals *****/
 /****************
 ** HTML COLORS **
@@ -12,7 +13,6 @@
 /********************
 ** WEB SAFE COLORS **
 ********************/
-/***** External Libraries *****/
 /***** Themes *****/
 #tablero main {
   padding-top: 60px;
@@ -26,7 +26,8 @@
   background-color: #FFFFFF;
   border-right: #EEEEEE 3px solid;
 }
-#tablero #barra-de-navegacion > a {
+#tablero #barra-de-navegacion > a,
+#tablero #barra-de-navegacion > .desplegable {
   position: relative;
   display: block;
   border-bottom: #EEEEEE 2px solid;
@@ -35,17 +36,37 @@
   font-weight: bold;
   text-decoration: none;
 }
-#tablero #barra-de-navegacion > a > i {
+#tablero #barra-de-navegacion > a > i,
+#tablero #barra-de-navegacion > .desplegable > i {
   position: relative;
   margin-right: 10px;
 }
-#tablero #barra-de-navegacion > a > span {
+#tablero #barra-de-navegacion > a > span,
+#tablero #barra-de-navegacion > .desplegable > span {
   position: relative;
   display: none;
 }
-#tablero #barra-de-navegacion > a:hover {
+#tablero #barra-de-navegacion > a:hover,
+#tablero #barra-de-navegacion > .desplegable:hover {
   background-color: #EEEEEE;
   cursor: pointer;
+}
+#tablero #barra-de-navegacion > .desplegable:after {
+  position: absolute;
+  right: 15px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 0.255em;
+  vertical-align: 0;
+  content: "";
+  border-top: 0.4em solid transparent;
+  border-right: 0;
+  border-bottom: 0.4em solid transparent;
+  border-left: 0.4em solid;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @media only screen and (min-width: 768px) {
@@ -55,10 +76,12 @@
   #tablero #barra-de-navegacion {
     width: 175px;
   }
-  #tablero #barra-de-navegacion > a > i {
+  #tablero #barra-de-navegacion > a > i,
+#tablero #barra-de-navegacion > .desplegable > i {
     display: none;
   }
-  #tablero #barra-de-navegacion > a > span {
+  #tablero #barra-de-navegacion > a > span,
+#tablero #barra-de-navegacion > .desplegable > span {
     display: block;
   }
 }
@@ -69,10 +92,12 @@
   #tablero #barra-de-navegacion {
     width: 200px;
   }
-  #tablero #barra-de-navegacion > a > i {
+  #tablero #barra-de-navegacion > a > i,
+#tablero #barra-de-navegacion > .desplegable > i {
     display: inline-block;
   }
-  #tablero #barra-de-navegacion > a > span {
+  #tablero #barra-de-navegacion > a > span,
+#tablero #barra-de-navegacion > .desplegable > span {
     display: inline-block;
   }
 }

@@ -5,13 +5,13 @@
          
     </a>
 
-    <a href="#">
+    <div class="desplegable">
         <i class="fas fa-boxes"></i>
         <span>{{ __('Products') }}</span>     
-    </a>
+    </div>
 
-    <a href="#">
+    <div class="desplegable">
         <i class="fas fa-box-open"></i>
         <span>{{ __('Providers') }}</span>     
-    </a>
+    </div>
 </nav>

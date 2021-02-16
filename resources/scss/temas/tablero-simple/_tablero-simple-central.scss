@@ -14,7 +14,8 @@ $anchoDeBarra: 70px;
         background-color: $white;
         border-right: $light 3px solid;
 
-        >a{
+        >a,
+        >.desplegable{
             position: relative;
             display: block;
             border-bottom: $light 2px solid;
@@ -38,6 +39,15 @@ $anchoDeBarra: 70px;
                 cursor: pointer;
             }
         }
+
+        >.desplegable{
+            &:after{
+                position: absolute;
+                right: 15px;
+                @include mycaret(right);
+                @include centerY;
+            }
+        }
     }
 }
 
@@ -58,7 +68,8 @@ $anchoDeBarra: 70px;
         #barra-de-navegacion{
             width: $anchoDeBarra;
 
-            >a{
+            >a,
+            >.desplegable{
                 >i{
                     display: none;
                 }
@@ -83,7 +94,8 @@ $anchoDeBarra: 70px;
         #barra-de-navegacion{
             width: $anchoDeBarra;
 
-            >a{
+            >a,
+            >.desplegable{
                 >i{
                     display: inline-block;
                 }
