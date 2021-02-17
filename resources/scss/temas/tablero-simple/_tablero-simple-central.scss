@@ -37,7 +37,7 @@ $abajo-de-barra-de-navegacion: 60px;
 #tablero{
     main{
         padding-top: $abajo-de-barra-de-navegacion;
-        margin-left: $anchor-de-barra;
+        margin-left: 0;
     }
 
     #barra-de-control{
@@ -230,4 +230,9 @@ $abajo-de-barra-de-navegacion: 60px;
 // Extra Large Screen
 @media only screen and (min-width: 1200px){
 
+}
+
+.titulo-de-pagina{
+    text-align: center;
+    padding: 25px 0 5px;
 }

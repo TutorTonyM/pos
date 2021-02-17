@@ -8,6 +8,14 @@
     </a>
 
     <div class="desplegable">
+        <i class="fas fa-users-cog"></i>
+        <span>Usuarios</span>
+        <div class="menu">
+            <a href="{{ route('usuarios.index') }}">Ver Listado</a>
+        </div>
+    </div>
+
+    <div class="desplegable">
         <i class="fas fa-boxes"></i>
         <span>{{ __('Products') }}</span>
         <div class="menu">
