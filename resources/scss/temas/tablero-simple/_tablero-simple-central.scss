@@ -23,7 +23,7 @@ $anchor-de-barra: 70px;
         margin-left: $anchor-de-barra;
     }
 
-    #barra-de-navegacion{
+    #barra-de-control{
         position: absolute;
         padding-top: 60px;
         width: $anchor-de-barra;
@@ -45,17 +45,26 @@ $anchor-de-barra: 70px;
                 display: none;
             }
 
+            &:hover{
+                background-color: $color-de-fondo-flotado;
+                cursor: pointer;
+            }
+        }
+
+        >.desplegable{
             >.menu{
                 position: absolute;
                 left: calc(100% + 5px);
                 background-color: $color-de-fondo-desplegable;
                 top: 5px;
                 white-space: nowrap;
+                display: none;
 
                 >a{
                     @extend %contenedorDeBotones;
                     border-bottom: $color-de-bordes-de-desplegable 2px solid;
                     padding: 10px 20px;
+                    font-weight: normal;
 
                     &:hover{
                         background-color: $color-de-fondo-desplegable-flotado;
@@ -64,18 +73,19 @@ $anchor-de-barra: 70px;
                 }
             }
 
-            &:hover{
-                background-color: $color-de-fondo-flotado;
-                cursor: pointer;
-            }
-        }
-
-        >.desplegable{
             &:after{
                 position: absolute;
                 right: 15px;
                 @include mycaret(right);
                 @include centerY;
+            }
+
+            &.activo{
+                background-color: $color-de-fondo-flotado;
+
+                >.menu{
+                    display: block;
+                }
             }
         }
     }
@@ -95,7 +105,7 @@ $anchor-de-barra: 70px;
             margin-left: $anchor-de-barra;
         }
 
-        #barra-de-navegacion{
+        #barra-de-control{
             width: $anchor-de-barra;
 
             >a,
@@ -121,7 +131,7 @@ $anchor-de-barra: 70px;
             margin-left: $anchor-de-barra;
         }
 
-        #barra-de-navegacion{
+        #barra-de-control{
             width: $anchor-de-barra;
 
             >a,

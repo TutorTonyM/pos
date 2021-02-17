@@ -14,9 +14,8 @@
 ** WEB SAFE COLORS **
 ********************/
 /***** Themes *****/
-#tablero #barra-de-navegacion > a > .menu > a,
-#tablero #barra-de-navegacion > .desplegable > .menu > a, #tablero #barra-de-navegacion > a,
-#tablero #barra-de-navegacion > .desplegable {
+#tablero #barra-de-control > .desplegable > .menu > a, #tablero #barra-de-control > a,
+#tablero #barra-de-control > .desplegable {
   position: relative;
   display: block;
   border-bottom: #EEEEEE 2px solid;
@@ -30,7 +29,7 @@
   padding-top: 60px;
   margin-left: 70px;
 }
-#tablero #barra-de-navegacion {
+#tablero #barra-de-control {
   position: absolute;
   padding-top: 60px;
   width: 70px;
@@ -38,40 +37,39 @@
   background-color: #FFFFFF;
   border-right: #EEEEEE 3px solid;
 }
-#tablero #barra-de-navegacion > a > i,
-#tablero #barra-de-navegacion > .desplegable > i {
+#tablero #barra-de-control > a > i,
+#tablero #barra-de-control > .desplegable > i {
   position: relative;
   margin-right: 10px;
 }
-#tablero #barra-de-navegacion > a > span,
-#tablero #barra-de-navegacion > .desplegable > span {
+#tablero #barra-de-control > a > span,
+#tablero #barra-de-control > .desplegable > span {
   position: relative;
   display: none;
 }
-#tablero #barra-de-navegacion > a > .menu,
-#tablero #barra-de-navegacion > .desplegable > .menu {
+#tablero #barra-de-control > a:hover,
+#tablero #barra-de-control > .desplegable:hover {
+  background-color: #EEEEEE;
+  cursor: pointer;
+}
+#tablero #barra-de-control > .desplegable > .menu {
   position: absolute;
   left: calc(100% + 5px);
   background-color: #EEEEEE;
   top: 5px;
   white-space: nowrap;
+  display: none;
 }
-#tablero #barra-de-navegacion > a > .menu > a,
-#tablero #barra-de-navegacion > .desplegable > .menu > a {
+#tablero #barra-de-control > .desplegable > .menu > a {
   border-bottom: #DDDDDD 2px solid;
   padding: 10px 20px;
+  font-weight: normal;
 }
-#tablero #barra-de-navegacion > a > .menu > a:hover,
-#tablero #barra-de-navegacion > .desplegable > .menu > a:hover {
+#tablero #barra-de-control > .desplegable > .menu > a:hover {
   background-color: #DDDDDD;
   cursor: pointer;
 }
-#tablero #barra-de-navegacion > a:hover,
-#tablero #barra-de-navegacion > .desplegable:hover {
-  background-color: #EEEEEE;
-  cursor: pointer;
-}
-#tablero #barra-de-navegacion > .desplegable:after {
+#tablero #barra-de-control > .desplegable:after {
   position: absolute;
   right: 15px;
   display: inline-block;
@@ -88,20 +86,26 @@
   top: 50%;
   transform: translateY(-50%);
 }
+#tablero #barra-de-control > .desplegable.activo {
+  background-color: #EEEEEE;
+}
+#tablero #barra-de-control > .desplegable.activo > .menu {
+  display: block;
+}
 
 @media only screen and (min-width: 768px) {
   #tablero main {
     margin-left: 175px;
   }
-  #tablero #barra-de-navegacion {
+  #tablero #barra-de-control {
     width: 175px;
   }
-  #tablero #barra-de-navegacion > a > i,
-#tablero #barra-de-navegacion > .desplegable > i {
+  #tablero #barra-de-control > a > i,
+#tablero #barra-de-control > .desplegable > i {
     display: none;
   }
-  #tablero #barra-de-navegacion > a > span,
-#tablero #barra-de-navegacion > .desplegable > span {
+  #tablero #barra-de-control > a > span,
+#tablero #barra-de-control > .desplegable > span {
     display: block;
   }
 }
@@ -109,15 +113,15 @@
   #tablero main {
     margin-left: 200px;
   }
-  #tablero #barra-de-navegacion {
+  #tablero #barra-de-control {
     width: 200px;
   }
-  #tablero #barra-de-navegacion > a > i,
-#tablero #barra-de-navegacion > .desplegable > i {
+  #tablero #barra-de-control > a > i,
+#tablero #barra-de-control > .desplegable > i {
     display: inline-block;
   }
-  #tablero #barra-de-navegacion > a > span,
-#tablero #barra-de-navegacion > .desplegable > span {
+  #tablero #barra-de-control > a > span,
+#tablero #barra-de-control > .desplegable > span {
     display: inline-block;
   }
 }
