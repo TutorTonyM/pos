@@ -17,4 +17,10 @@ Route::get('/', function () {
     return view('tablero.es.tablero');
 })->name('tablero');
 
+Route::namespace('Tablero')->group(function ()
+{
+    Route::resource('usuarios', 'UsuarioController');
+});
+
+
 require __DIR__.'/auth.php';
