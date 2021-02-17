@@ -92,7 +92,14 @@ $(document).ready(function () {
 /***/ (() => {
 
 $(document).ready(function () {
+  alternadorDeBarraDeControl();
   desplegablesEnBarraDecontrol();
+
+  function alternadorDeBarraDeControl() {
+    $('#contenedor-de-alternador').click(function () {
+      $(this).closest('#barra-de-control').toggleClass('expandido');
+    });
+  }
 
   function desplegablesEnBarraDecontrol() {
     // $('#barra-de-control').on('click', '.desplegable', function () {

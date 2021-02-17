@@ -25,6 +25,7 @@ $abajo-de-barra-de-navegacion: 60px;
     width: 34px;
     height: 3px;
     background-color: $color-de-alternador;
+    @include transition;
 }
 
 %alternadorLados{
@@ -41,11 +42,13 @@ $abajo-de-barra-de-navegacion: 60px;
 
     #barra-de-control{
         position: absolute;
+        left: -70px;
         padding-top: $abajo-de-barra-de-navegacion;
         width: $anchor-de-barra;
         height: 100vh;
         background-color: $color-de-fondo-principal;
         border-right: $color-de-bordes 3px solid;
+        @include transition;
 
         >#contenedor-de-alternador{
             position: absolute;
@@ -76,6 +79,26 @@ $abajo-de-barra-de-navegacion: 60px;
 
             &:hover{
                 cursor: pointer;
+            }
+        }
+
+        &.expandido{
+            left: 0;
+
+            >#contenedor-de-alternador{
+                >#alternador{
+                    width: 0;
+    
+                    &:before{
+                        top: 0;
+                        @include rotate(-45deg);
+                    }
+    
+                    &:after{
+                        top: 0;
+                        @include rotate(45deg);
+                    }
+                }
             }
         }
 
@@ -141,7 +164,15 @@ $abajo-de-barra-de-navegacion: 60px;
 
 // Small Screen
 @media only screen and (min-width: 576px){
-    
+    #tablero{
+        #barra-de-control{
+            left: 0;
+
+            >#contenedor-de-alternador{
+                display: none;
+            }
+        }
+    }
 }
 
 // Medium Screen

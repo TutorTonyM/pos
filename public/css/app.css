@@ -31,6 +31,10 @@
   width: 34px;
   height: 3px;
   background-color: #555555;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
 }
 
 #tablero #barra-de-control > #contenedor-de-alternador > #alternador:after, #tablero #barra-de-control > #contenedor-de-alternador > #alternador:before {
@@ -44,11 +48,16 @@
 }
 #tablero #barra-de-control {
   position: absolute;
+  left: -70px;
   padding-top: 60px;
   width: 70px;
   height: 100vh;
   background-color: #FFFFFF;
   border-right: #EEEEEE 3px solid;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
 }
 #tablero #barra-de-control > #contenedor-de-alternador {
   position: absolute;
@@ -74,6 +83,20 @@
 }
 #tablero #barra-de-control > #contenedor-de-alternador:hover {
   cursor: pointer;
+}
+#tablero #barra-de-control.expandido {
+  left: 0;
+}
+#tablero #barra-de-control.expandido > #contenedor-de-alternador > #alternador {
+  width: 0;
+}
+#tablero #barra-de-control.expandido > #contenedor-de-alternador > #alternador:before {
+  top: 0;
+  transform: rotate(-45deg);
+}
+#tablero #barra-de-control.expandido > #contenedor-de-alternador > #alternador:after {
+  top: 0;
+  transform: rotate(45deg);
 }
 #tablero #barra-de-control > a > i,
 #tablero #barra-de-control > .desplegable > i {
@@ -131,6 +154,14 @@
   display: block;
 }
 
+@media only screen and (min-width: 576px) {
+  #tablero #barra-de-control {
+    left: 0;
+  }
+  #tablero #barra-de-control > #contenedor-de-alternador {
+    display: none;
+  }
+}
 @media only screen and (min-width: 768px) {
   #tablero main {
     margin-left: 175px;
