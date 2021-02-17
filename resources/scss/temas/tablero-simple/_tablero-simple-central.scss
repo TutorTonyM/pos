@@ -4,8 +4,10 @@ $color-de-fondo-desplegable: $claro;
 $color-de-bordes: $claro;
 $color-de-bordes-de-desplegable: $sombra1;
 $color-de-fondo-desplegable-flotado: $sombra1;
+$color-de-alternador: $sombra9;
 
 $anchor-de-barra: 70px;
+$abajo-de-barra-de-navegacion: 60px;
 
 %contenedorDeBotones{
     position: relative;
@@ -17,19 +19,65 @@ $anchor-de-barra: 70px;
     text-decoration: none;
 }
 
+%alternadorCentro{
+    position: absolute;
+    left: 3px;
+    width: 34px;
+    height: 3px;
+    background-color: $color-de-alternador;
+}
+
+%alternadorLados{
+    @extend %alternadorCentro;
+    content: "";
+    left: 0;
+}
+
 #tablero{
     main{
-        padding-top: 60px;
+        padding-top: $abajo-de-barra-de-navegacion;
         margin-left: $anchor-de-barra;
     }
 
     #barra-de-control{
         position: absolute;
-        padding-top: 60px;
+        padding-top: $abajo-de-barra-de-navegacion;
         width: $anchor-de-barra;
         height: 100vh;
         background-color: $color-de-fondo-principal;
         border-right: $color-de-bordes 3px solid;
+
+        >#contenedor-de-alternador{
+            position: absolute;
+            top: $abajo-de-barra-de-navegacion;
+            left: 125%;
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+
+            >#alternador{
+                @extend %alternadorCentro;
+                @include centerY;
+
+                &:before{
+                    @extend %alternadorLados;
+                    top: -10px;
+                }
+
+                &:after{
+                    @extend %alternadorLados;
+                    top: 10px;
+                }
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
 
         >a,
         >.desplegable{

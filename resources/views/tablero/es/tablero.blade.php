@@ -6,6 +6,6 @@
 
 @section('contenido')
 
-    Este es el TABLERO!!!
+    {{-- Este es el TABLERO!!! --}}
 
 @endsection

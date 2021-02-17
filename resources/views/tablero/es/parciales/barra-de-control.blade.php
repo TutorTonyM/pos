@@ -1,4 +1,6 @@
 <nav id="barra-de-control">
+    <div id="contenedor-de-alternador"><span id="alternador"></span></div>
+
     <a href="#">
         <i class="fas fa-cash-register"></i>
         <span>{{ __('Cash Register') }}</span>
