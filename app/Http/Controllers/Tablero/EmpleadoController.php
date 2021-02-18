@@ -26,7 +26,7 @@ class EmpleadoController extends Controller
      */
     public function create()
     {
-        //
+        return view('tablero.empleados.create');
     }
 
     /**

@@ -43,7 +43,7 @@
 }
 
 #tablero main {
-  padding-top: 60px;
+  padding: 60px 15px 0;
   margin-left: 0;
 }
 #tablero #barra-de-control {
@@ -155,6 +155,9 @@
 }
 
 @media only screen and (min-width: 576px) {
+  #tablero main {
+    margin-left: 70px;
+  }
   #tablero #barra-de-control {
     left: 0;
   }

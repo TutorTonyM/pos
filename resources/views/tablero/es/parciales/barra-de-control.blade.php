@@ -12,6 +12,7 @@
         <span>Empleados</span>
         <div class="menu">
             <a href="{{ route('empleados.index') }}">Ver Listado</a>
+            <a href="{{ route('empleados.create') }}">Nuevo Empleado</a>
         </div>
     </div>
 
