@@ -22,6 +22,7 @@ class EmpleadoFactory extends Factory
     public function definition()
     {
         return [
+            'numero' => $this->faker->randomNumber(6, true),
             'primer_nombre' => $this->faker->firstName,
             'segundo_nombre' => $this->faker->firstName,
             'primer_apellido' => $this->faker->lastName,

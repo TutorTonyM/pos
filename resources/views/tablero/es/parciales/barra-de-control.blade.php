@@ -9,9 +9,9 @@
 
     <div class="desplegable">
         <i class="fas fa-users-cog"></i>
-        <span>Usuarios</span>
+        <span>Empleados</span>
         <div class="menu">
-            <a href="{{ route('usuarios.index') }}">Ver Listado</a>
+            <a href="{{ route('empleados.index') }}">Ver Listado</a>
         </div>
     </div>
 
