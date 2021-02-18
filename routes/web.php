@@ -20,6 +20,7 @@ Route::get('/', function () {
 Route::namespace('Tablero')->group(function ()
 {
     Route::resource('usuarios', 'UsuarioController');
+    Route::resource('empleados', 'EmpleadoController');
 });
 
 

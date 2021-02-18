@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Tablero;
 
 use App\Models\Empleado;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class EmpleadoController extends Controller
 {
@@ -14,7 +15,8 @@ class EmpleadoController extends Controller
      */
     public function index()
     {
-        //
+        $empleados = Empleado::all();
+        return view('tablero.empleados.index', compact('empleados'));
     }
 
     /**
