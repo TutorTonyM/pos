@@ -22,7 +22,16 @@ class EmpleadoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'primer_nombre' => $this->faker->firstName,
+            'segundo_nombre' => $this->faker->firstName,
+            'primer_apellido' => $this->faker->lastName,
+            'segundo_apellido' => $this->faker->lastName,
+            'direccion' => $this->faker->address,
+            'ciudad' => $this->faker->city,
+            'estado' => $this->faker->state,
+            'codigo_postal' => $this->faker->postcode,
+            'telefono' => $this->faker->phoneNumber,
+            'telefono2' => $this->faker->phoneNumber,
         ];
     }
 }
