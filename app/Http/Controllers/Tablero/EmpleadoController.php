@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Tablero;
 use App\Models\Empleado;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ValidarEmpleado;
 use Exception;
 
 class EmpleadoController extends Controller
@@ -36,11 +37,11 @@ class EmpleadoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ValidarEmpleado $request)
     {
-        dd($request->input());
+        $datos = $request->validated()+ ['numero' => 123456];
         try{
-            Empleado::create($request->input() + ['numero' => 123456]);
+            Empleado::create($datos);
             session()->flash('exito', 'El empleado fue agregado exitosamente');
             return redirect(route('empleados.index'));
         }
