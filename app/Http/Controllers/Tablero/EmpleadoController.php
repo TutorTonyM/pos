@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Tablero;
 use App\Models\Empleado;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Exception;
 
 class EmpleadoController extends Controller
 {
@@ -37,7 +38,16 @@ class EmpleadoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->input());
+        try{
+            Empleado::create($request->input() + ['numero' => 123456]);
+            session()->flash('exito', 'El empleado fue agregado exitosamente');
+            return redirect(route('empleados.index'));
+        }
+        catch(Exception $e){
+            session()->flash('falla', 'Algo salio mal y el empleado no pudo ser agregado. Error: ' . $e->getMessage());
+            return back();
+        }
     }
 
     /**
