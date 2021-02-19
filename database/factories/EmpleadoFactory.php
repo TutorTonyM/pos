@@ -27,7 +27,7 @@ class EmpleadoFactory extends Factory
             'segundo_nombre' => $this->faker->firstName,
             'primer_apellido' => $this->faker->lastName,
             'segundo_apellido' => $this->faker->lastName,
-            'direccion' => $this->faker->address,
+            'direccion' => $this->faker->streetAddress,
             'ciudad' => $this->faker->city,
             'estado' => $this->faker->state,
             'codigo_postal' => $this->faker->postcode,
