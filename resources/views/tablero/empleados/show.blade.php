@@ -27,6 +27,9 @@
                 <p>Telefono Primario: <strong>{{ $empleado->telefono }}</strong></p>
                 <p>Telefono Secundario: <strong>{{ is_null($empleado->telefono2) ? "Ninguno" : $empleado->telefono2 }}</strong></p>
             </div>
+            <div class="card-footer">
+                <a href="{{ route('empleados.edit', ['empleado'=>$empleado->id]) }}" class="btn btn-primary">Editar</a>
+            </div>
         </div>
     </div>
 </div>

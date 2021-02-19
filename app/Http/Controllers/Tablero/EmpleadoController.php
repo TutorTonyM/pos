@@ -70,7 +70,7 @@ class EmpleadoController extends Controller
      */
     public function edit(Empleado $empleado)
     {
-        //
+        return view('tablero.empleados.edit', compact('empleado'));
     }
 
     /**
