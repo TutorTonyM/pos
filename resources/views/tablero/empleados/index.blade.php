@@ -7,7 +7,7 @@
 <h1 class="titulo-de-pagina">Listado de Empleados</h1>
 
 <div class="table-responsive">
-    <table class="table table-striped">
+    <table class="table table-striped tabla-presionable">
         <thead>
             <tr>
                 <th scope="col">Numero de Empleado</th>
@@ -20,7 +20,7 @@
         </thead>
         <tbody>
             @foreach ($empleados as $empleado)
-            <tr>
+            <tr data-href="{{ route('empleados.show', ['empleado'=>$empleado->id]) }}">
                 <th scope="row">{{ $empleado->numero }}</th>
                 <td>{{ $empleado->primer_nombre }}</td>
                 <td>{{ $empleado->segundo_nombre }}</td>

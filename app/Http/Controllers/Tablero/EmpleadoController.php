@@ -48,7 +48,7 @@ class EmpleadoController extends Controller
      */
     public function show(Empleado $empleado)
     {
-        //
+        return view('tablero.empleados.show', compact('empleado'));
     }
 
     /**

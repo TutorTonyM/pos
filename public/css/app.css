@@ -54,6 +54,7 @@
   height: 100vh;
   background-color: #FFFFFF;
   border-right: #EEEEEE 3px solid;
+  z-index: 10;
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
@@ -200,6 +201,11 @@
 .titulo-de-pagina {
   text-align: center;
   padding: 25px 0 5px;
+}
+
+.tabla-presionable tr:hover {
+  cursor: pointer;
+  background-color: #CCCCCC !important;
 }
 
 /***** Styles *****/

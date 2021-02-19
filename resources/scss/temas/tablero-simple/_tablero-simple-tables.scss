@@ -1,0 +1,10 @@
+$color-de-tabla-flotada: $sombra2;
+
+.tabla-presionable{
+    tr{
+        &:hover{
+            cursor: pointer;
+            background-color: $color-de-tabla-flotada !important;
+        }
+    }
+}

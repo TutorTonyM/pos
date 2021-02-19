@@ -13,6 +13,8 @@ __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap
 
 __webpack_require__(/*! ./temas/tablero-simple/tablero-simple-barra-de-control */ "./resources/js/temas/tablero-simple/tablero-simple-barra-de-control.js");
 
+__webpack_require__(/*! ./temas/tablero-simple/tablero-simple-tables */ "./resources/js/temas/tablero-simple/tablero-simple-tables.js");
+
 __webpack_require__(/*! ./boton-pantalla-completa */ "./resources/js/boton-pantalla-completa.js");
 
 /***/ }),
@@ -118,6 +120,20 @@ $(document).ready(function () {
       }
     });
   }
+});
+
+/***/ }),
+
+/***/ "./resources/js/temas/tablero-simple/tablero-simple-tables.js":
+/*!********************************************************************!*\
+  !*** ./resources/js/temas/tablero-simple/tablero-simple-tables.js ***!
+  \********************************************************************/
+/***/ (() => {
+
+$(document).ready(function () {
+  $('.tabla-presionable').on('click', 'tr', function () {
+    window.location = $(this).data('href');
+  });
 });
 
 /***/ }),
