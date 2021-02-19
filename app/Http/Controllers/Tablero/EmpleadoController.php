@@ -80,9 +80,18 @@ class EmpleadoController extends Controller
      * @param  \App\Models\Empleado  $empleado
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Empleado $empleado)
+    public function update(ValidarEmpleado $request, Empleado $empleado)
     {
-        //
+        $datos = $request->validated();
+        try{
+            $empleado->update($datos);
+            session()->flash('exito', 'El empleado fue actualizado exitosamente');
+            return redirect(route('empleados.index'));
+        }
+        catch(Exception $e){
+            session()->flash('falla', 'Algo salio mal y el empleado no pudo ser actualizado. Error: ' . $e->getMessage());
+            return back();
+        }
     }
 
     /**

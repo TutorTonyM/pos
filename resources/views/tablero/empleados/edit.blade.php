@@ -15,7 +15,8 @@
 
 <h1 class="titulo-de-pagina">Editar Empleado</h1>
 
-<form action="{{ route('empleados.store') }}" method="POST">
+<form action="{{ route('empleados.update', $empleado->id) }}" method="POST">
+    @method('PUT')
     @csrf
     <div class="form-row">
         <div class="form-group mt-3 col-12 col-md-6 col-xl-3">
@@ -166,7 +167,7 @@
                 class="form-check-input" 
                 name='activo'
                 value="1"  
-                {{ old('activo') ? 'checked' : '' }}>
+                {{ old('activo') || $empleado->activo ? 'checked' : '' }}>
         <label for="activo" class="form-check-label">Activo</label>
         @if ($errors->has('activo'))
         <span class="invalid-feedback" role="alert">
