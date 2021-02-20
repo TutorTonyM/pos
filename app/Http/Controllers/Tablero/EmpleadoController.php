@@ -102,6 +102,14 @@ class EmpleadoController extends Controller
      */
     public function destroy(Empleado $empleado)
     {
-        //
+        try{
+            $empleado->delete();
+            session()->flash('exito', 'El empleado fue eliminado exitosamente');
+            return redirect(route('empleados.index'));
+        }
+        catch(Exception $e){
+            session()->flash('falla', 'Algo salio mal y el empleado no pudo ser eliminado. Error: ' . $e->getMessage());
+            return back();
+        }
     }
 }

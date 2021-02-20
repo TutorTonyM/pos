@@ -4,6 +4,15 @@
 
 @section('contenido')
 
+@if ($flash = Session::get('falla'))
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Ups!</strong> {{ $flash }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+@endif
+
 <h1 class="titulo-de-pagina">Informacion de Empleado</h1>
 
 <div class="row justify-content-center mt-4">
@@ -28,7 +37,9 @@
                 <p>Telefono Secundario: <strong>{{ is_null($empleado->telefono2) ? "Ninguno" : $empleado->telefono2 }}</strong></p>
             </div>
             <div class="card-footer">
-                <a href="{{ route('empleados.edit', ['empleado'=>$empleado->id]) }}" class="btn btn-primary">Editar</a>
+                <a href="{{ route('empleados.edit', ['empleado'=>$empleado->id]) }}" class="btn btn-primary">Editar</a>                
+                <button type="button" class="btn btn-danger" onclick="document.getElementById('eliminar-empleado').submit();">Eliminar</button>
+                <form id="eliminar-empleado" action="{{ route('empleados.destroy', $empleado->id) }}" method="POST" class="d-none">@method('DELETE')@csrf</form>
             </div>
         </div>
     </div>
