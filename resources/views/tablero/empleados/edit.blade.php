@@ -4,15 +4,6 @@
 
 @section('contenido')
 
-@if ($flash = Session::get('falla'))
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Ups!</strong> {{ $flash }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-@endif
-
 <h1 class="titulo-de-pagina">Editar Empleado</h1>
 
 <form action="{{ route('empleados.update', $empleado->id) }}" method="POST">
@@ -167,7 +158,7 @@
                 class="form-check-input" 
                 name='activo'
                 value="1"  
-                {{ old('activo') || $empleado->activo ? 'checked' : '' }}>
+                {{ old('activo') || $emplea ? 'checked' : '' }}>
         <label for="activo" class="form-check-label">Activo</label>
         @if ($errors->has('activo'))
         <span class="invalid-feedback" role="alert">

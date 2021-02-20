@@ -34,7 +34,7 @@
             @include('tablero.es.parciales.barra-de-control')
 
             <main>                
-                {{--@include('tablero.es.parciales.alertas-basicas')--}}
+                @include('compartido.alertas.alertas-basicas')
                 @yield('contenido')
             </main>
         </div>

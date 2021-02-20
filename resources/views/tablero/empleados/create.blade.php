@@ -4,15 +4,6 @@
 
 @section('contenido')
 
-@if ($flash = Session::get('falla'))
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Ups!</strong> {{ $flash }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-@endif
-
 <h1 class="titulo-de-pagina">Agregar Empleado</h1>
 
 <form action="{{ route('empleados.store') }}" method="POST">
