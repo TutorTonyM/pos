@@ -148,6 +148,20 @@
             </span>
             @endif
         </div>
+
+        <div class="form-group col-12">
+            <label for="contratado_el">Fecha de Contratacion</label>
+            <input id="contratado_el" 
+                    type="date" 
+                    class="form-control {{ $errors->has('contratado_el') ? ' is-invalid' : '' }}"
+                    name="contratado_el"
+                    value="{{ old('contratado_el') }}">
+            @if ($errors->has('contratado_el'))
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $errors->first('contratado_el') }}</strong>
+            </span>
+            @endif
+        </div>
     </div>    
 
     <div class="form-group form-check col-12">
