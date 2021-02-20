@@ -33,6 +33,7 @@ class EmpleadoFactory extends Factory
             'codigo_postal' => $this->faker->postcode,
             'telefono' => $this->faker->phoneNumber,
             'telefono2' => $this->faker->phoneNumber,
+            'contratado_el' => $this->faker->date()
         ];
     }
 }

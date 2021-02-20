@@ -20,6 +20,7 @@
                 <p>P. Apellido: <strong>{{ $empleado->primer_apellido }}</strong></p>
                 <p>S. Apellido: <strong>{{ $empleado->segundo_apellido }}</strong></p>
                 <p>Activo: <strong>{{ $empleado->activo ? "Si" : "No" }}</strong></p>
+                <p>Fecha de Contratacion: <strong>{{ Carbon\Carbon::parse($empleado->contratado_el)->translatedFormat('d/m/Y') }}</strong></p>
                 <p>Direccion: <strong>{{ $empleado->direccion }}</strong></p>
                 <p>Ciudad: <strong>{{ $empleado->ciudad }}</strong></p>
                 <p>Estado: <strong>{{ $empleado->estado }}</strong></p>

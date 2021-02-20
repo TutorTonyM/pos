@@ -26,6 +26,7 @@ class CreateEmpleadosTable extends Migration
             $table->string('codigo_postal');
             $table->string('telefono');
             $table->string('telefono2')->nullable();
+            $table->timestamp('contratado_el');
             $table->boolean('activo')->default(true);
             $table->timestamps();
         });
