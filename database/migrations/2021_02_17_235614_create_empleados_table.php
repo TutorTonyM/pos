@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 class CreateEmpleadosTable extends Migration
 {
@@ -28,7 +29,12 @@ class CreateEmpleadosTable extends Migration
             $table->string('telefono2')->nullable();
             $table->timestamp('contratado_el');
             $table->boolean('activo')->default(true);
-            $table->timestamps();
+            $table->timestamp('creado_el')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->unsignedInteger('creado_por');
+            $table->timestamp('actualizado_el')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
+            $table->unsignedInteger('actualizado_por');
+            $table->timestamp('eliminado_el')->nullable();
+            $table->unsignedInteger('eliminado_por')->nullable();
         });
     }
 
