@@ -9,10 +9,7 @@
 <div class="row justify-content-center mt-4">
     <div class="col-12 col-md-10 col-lg-8 col-xl-6">
         <div class="card">
-            <h5 class="card-header">
-                {{ $empleado->primer_nombre }} {{ $empleado->segundo_nombre }}
-                {{ $empleado->primer_apellido }} {{ $empleado->segundo_apellido }}
-            </h5>
+            <h5 class="card-header">{{ $empleado->nombre_completo }}</h5>
             <div class="card-body">
                 <p>Numero de Empleado: <strong>{{ $empleado->numero }}</strong></p>
                 <p>P. Nombre: <strong>{{ $empleado->primer_nombre }}</strong></p>
@@ -20,7 +17,7 @@
                 <p>P. Apellido: <strong>{{ $empleado->primer_apellido }}</strong></p>
                 <p>S. Apellido: <strong>{{ $empleado->segundo_apellido }}</strong></p>
                 <p>Activo: <strong>{{ $empleado->activo ? "Si" : "No" }}</strong></p>
-                <p>Fecha de Contratacion: <strong>{{ Carbon\Carbon::parse($empleado->contratado_el)->translatedFormat('d/m/Y') }}</strong></p>
+                <p>Fecha de Contratacion: <strong>{{ $empleado->fecha_de_contratacion }}</strong></p>
                 <p>Direccion: <strong>{{ $empleado->direccion }}</strong></p>
                 <p>Ciudad: <strong>{{ $empleado->ciudad }}</strong></p>
                 <p>Estado: <strong>{{ $empleado->estado }}</strong></p>

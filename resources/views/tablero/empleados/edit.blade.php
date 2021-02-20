@@ -158,7 +158,7 @@
                 class="form-check-input" 
                 name='activo'
                 value="1"  
-                {{ old('activo') || $emplea ? 'checked' : '' }}>
+                {{ old('activo') || $empleado ? 'checked' : '' }}>
         <label for="activo" class="form-check-label">Activo</label>
         @if ($errors->has('activo'))
         <span class="invalid-feedback" role="alert">
