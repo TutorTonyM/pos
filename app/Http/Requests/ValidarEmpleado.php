@@ -24,7 +24,7 @@ class ValidarEmpleado extends FormRequest
     public function rules()
     {
         return [
-            'primer_nombre' => ['required', 'string', 'min:2', 'max:20'],
+            'primer_nombre' => ['required', 'string', 'min:5', 'max:20'],
             'segundo_nombre' => ['nullable', 'string', 'max:20'],
             'primer_apellido' => ['required', 'string', 'min:2', 'max:20'],
             'segundo_apellido' => ['nullable', 'string', 'max:20'],
