@@ -33,4 +33,7 @@
     </table>
 </div>
 
+<span>{{ $empleados->firstItem().'-'.$empleados->lastItem().' de '.$empleados->total() }}</span>
+<span class="float-lg-right">{{ $empleados->links() }}</span>
+
 @endsection
