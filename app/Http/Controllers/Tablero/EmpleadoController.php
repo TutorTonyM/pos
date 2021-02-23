@@ -6,6 +6,8 @@ use App\Models\Empleado;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ValidarEmpleado;
+use App\Models\Identificacion;
+use App\Models\Model;
 use Exception;
 
 class EmpleadoController extends Controller
@@ -39,7 +41,7 @@ class EmpleadoController extends Controller
      */
     public function store(ValidarEmpleado $request)
     {
-        $datos = $request->validated()+ ['numero' => 123456];
+        $datos = $request->validated() + Identificacion::numeroDeEmpleado() + Model::creadoPor();
         try{
             Empleado::create($datos);
             session()->flash('exito', 'El empleado fue agregado exitosamente');

@@ -2,16 +2,14 @@
 
 namespace App\Models;
 
+use App\Traits\UsaEstampasDeTiempo;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
 class Empleado extends Model
 {
-    use HasFactory;
-
-    public $timestamps = false;
+    use HasFactory, UsaEstampasDeTiempo;
 
     protected $fillable = [
         'numero', 'primer_nombre', 'segundo_nombre', 'primer_apellido', 'segundo_apellido', 'direccion', 'ciudad', 'estado', 'codigo_postal', 'telefono', 'telefono2', 'activo', 'contratado_el'
