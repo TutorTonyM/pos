@@ -217,6 +217,10 @@
   flex-wrap: wrap;
 }
 
+.no-show {
+  display: none;
+}
+
 .tabla-presionable tr:hover {
   cursor: pointer;
   background-color: #CCCCCC !important;
