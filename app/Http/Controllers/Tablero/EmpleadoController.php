@@ -9,6 +9,7 @@ use App\Http\Requests\ValidarEmpleado;
 use App\Models\Identificacion;
 use App\Models\Model;
 use Exception;
+use Symfony\Component\Console\Input\Input;
 
 class EmpleadoController extends Controller
 {
@@ -115,8 +116,26 @@ class EmpleadoController extends Controller
         }
     }
 
-    public function buscarEmpleados()
+    public function buscarEmpleados(Request $request)
     {
-        return back();
+        $validator = $request->validate([
+            'consulta' => ['required']
+        ],[
+            'required' => 'Por favor ingrese una busqueda.'
+        ]);
+
+        $empleados = null;
+        $consulta = $request->input('consulta');
+
+        try{
+            $empleados = Empleado::where('primer_apellido','LIKE', '%'.$consulta.'%')->paginate();            
+            return view('tablero.empleados.index', compact('empleados'));
+        }
+        catch(Exception $e){
+            $errorMessage = 'Algo salio mal y la busqueda no puso der ejecutada.';
+            return view('tablero.empleados.index', compact('errorMessage', 'empleados'));
+        }
+
+        
     }
 }

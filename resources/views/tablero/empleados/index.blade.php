@@ -8,13 +8,26 @@
 
 <form action="{{ route('buscar.empleados', ['id'=>1]) }}" method="POST">
     @csrf
-    <div class="input-group">
-        <input type="text" class="form-control" placeholder="Buscar" autofocus>
-        <button type="submit" class="btn btn-outline-dark"><i class="fas fa-search"></i></button>
+    <div class="form-group col-12">
+        <div class="input-group">
+            <input id="consulta"
+                    type="text"
+                    class="form-control {{ $errors->has('consulta') ? ' is-invalid' : '' }}"
+                    name="consulta"
+                    value="{{ old('consulta') }}"
+                    placeholder="Buscar"
+                    autofocus>
+            <button type="submit" class="btn btn-outline-dark"><i class="fas fa-search"></i></button>
+            @if ($errors->has('consulta'))
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $errors->first('consulta') }}</strong>
+            </span>
+            @endif
+        </div>
     </div>
 </form>
 
-@if ($empleados->total() > 0)  
+@if (!is_null($empleados) && $empleados->total() > 0)  
     <div class="table-responsive">
         <table class="table table-striped tabla-presionable">
             <thead>
@@ -45,7 +58,7 @@
     <span>{{ $empleados->firstItem().'-'.$empleados->lastItem().' de '.$empleados->total() }}</span>
     <span class="float-lg-right">{{ $empleados->links() }}</span>
 @else
-    <p class="text-danger text-center"><strong>No hay resultados.</strong></p>
+    <p class="text-danger text-center mt-5"><strong>{{ $errorMessage ?? 'No hay resultados.' }}</strong></p>
 @endif
 
 @endsection
