@@ -114,4 +114,9 @@ class EmpleadoController extends Controller
             return back();
         }
     }
+
+    public function buscarEmpleados()
+    {
+        return back();
+    }
 }
