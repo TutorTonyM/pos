@@ -126,9 +126,49 @@ class EmpleadoController extends Controller
 
         $empleados = null;
         $consulta = $request->input('consulta');
+        $numero = $request->input('numero');
+        $nombre = $request->input('nombre');
+        $apellido = $request->input('apellido');
+        $contratado_el = $request->input('contratado_el');
+        $direccion = $request->input('direccion');
+        $ciudad = $request->input('ciudad');
+        $estado = $request->input('estado');
+        $codigo_postal = $request->input('codigo_postal');
+        $telefono = $request->input('telefono');
 
         try{
-            $empleados = Empleado::where('primer_apellido','LIKE', '%'.$consulta.'%')->paginate();            
+            $empleados = Empleado::query();
+            
+            if ($numero) {
+                $empleados = $empleados->where('numero','LIKE', '%'.$consulta.'%');
+            }
+            elseif ($nombre){
+                $empleados = $empleados->where('primer_nombre','LIKE', '%'.$consulta.'%')->orWhere('segundo_nombre', 'LIKE', '%'.$consulta.'%');
+            }
+            elseif ($apellido){
+                $empleados = $empleados->where('primer_apellido','LIKE', '%'.$consulta.'%')->orWhere('segundo_apellido', 'LIKE', '%'.$consulta.'%');
+            }
+            elseif ($contratado_el) {
+                $empleados = $empleados->where('contratado_el','LIKE', '%'.$consulta.'%');
+            }
+            elseif ($direccion) {
+                $empleados = $empleados->where('direccion','LIKE', '%'.$consulta.'%');
+            }
+            elseif ($ciudad) {
+                $empleados = $empleados->where('ciudad','LIKE', '%'.$consulta.'%');
+            }
+            elseif ($estado) {
+                $empleados = $empleados->where('estado','LIKE', '%'.$consulta.'%');
+            }
+            elseif ($codigo_postal) {
+                $empleados = $empleados->where('codigo_postal','LIKE', '%'.$consulta.'%');
+            }
+            elseif ($telefono){
+                $empleados = $empleados->where([['telefono','LIKE', '%'.$consulta.'%'], ['telefono2', 'LIKE', '%'.$consulta.'%']]);
+            }
+
+            $empleados = $empleados->paginate(10);
+
             return view('tablero.empleados.index', compact('empleados'));
         }
         catch(Exception $e){
