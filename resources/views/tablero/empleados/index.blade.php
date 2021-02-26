@@ -6,7 +6,7 @@
 
 <h1 class="titulo-de-pagina">Listado de Empleados</h1>
 
-<form action="{{ route('buscar.empleados', ['id'=>1]) }}" method="POST">
+<form action="{{ route('buscar.empleados') }}" method="POST">
     @csrf
     <div class="form-group col-12">
         <div class="input-group">
@@ -14,7 +14,7 @@
                     type="text"
                     class="form-control {{ $errors->has('consulta') ? ' is-invalid' : '' }}"
                     name="consulta"
-                    value="{{ old('consulta') }}"
+                    value="@if(old('consulta')){{ old('consulta') }}@elseif(isset($consulta)){{ $consulta }}@endif"
                     placeholder="Buscar"
                     autofocus>
             <button type="submit" class="btn btn-outline-dark"><i class="fas fa-search"></i></button>

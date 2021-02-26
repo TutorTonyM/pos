@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::namespace('Tablero')->group(function ()
 {    
-    Route::post('buscar-empleados', 'EmpleadoController@buscarEmpleados')->name('buscar.empleados');
+    Route::any('buscar-empleados', 'EmpleadoController@buscarEmpleados')->name('buscar.empleados');
     Route::resource('usuarios', 'UsuarioController');
     Route::resource('empleados', 'EmpleadoController');
 });
