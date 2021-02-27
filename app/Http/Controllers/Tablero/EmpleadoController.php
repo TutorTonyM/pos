@@ -22,8 +22,9 @@ class EmpleadoController extends Controller
      */
     public function index()
     {
-        $empleados = Empleado::paginate(10);
-        return view('tablero.empleados.index', compact('empleados'));
+        $empleados = Empleado::orderBy('numero')->paginate(10);
+        $claseOrden = ['campo' => 'numero', 'clase' => 'orden-descendiente'];
+        return view('tablero.empleados.index', compact('empleados', 'claseOrden'));
     }
 
     /**
@@ -128,7 +129,9 @@ class EmpleadoController extends Controller
 
         if (request('nombre')) request()->merge(['primer_nombre' => 1, 'segundo_nombre' => 1]);
         if (request('apellido')) request()->merge(['primer_apellido' => 1, 'segundo_apellido' => 1]);
-        if (request('telefono')) request()->merge(['telefono2' => 1]); 
+        if (request('telefono')) request()->merge(['telefono2' => 1]);
+        $ordenadoPor = request()->has('orderBy') ? request('orderBy') : request()->merge(['orderBy' => 'numero']);
+        $orden = request()->has('order') ? request('order') : request()->merge(['order' => 'desc']);
         $empleados = Empleado::query();
         $cadenaDeConsulta = [];
         $consulta = request('consulta');
@@ -165,6 +168,8 @@ class EmpleadoController extends Controller
                 $cadenaDeConsulta[$criterio] = $valor;
             }
         };
+
+        $empleados = $empleados->orderBy($ordenadoPor, $orden);
 
         $empleados = $empleados->paginate(10)->appends($cadenaDeConsulta);
         return view('tablero.empleados.index', compact('empleados'));

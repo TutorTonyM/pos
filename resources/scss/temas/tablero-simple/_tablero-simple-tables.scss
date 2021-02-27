@@ -1,10 +1,59 @@
 $color-de-tabla-flotada: $sombra2;
+$color-de-flecha-no-activa: $sombra5;
+$color-de-flecha-activa: $negro;
+$link: $link;
 
 .tabla-presionable{
-    tr{
-        &:hover{
-            cursor: pointer;
-            background-color: $color-de-tabla-flotada !important;
+    tbody{
+        tr{
+            &:hover{
+                cursor: pointer;
+                background-color: $color-de-tabla-flotada !important;
+            }
+        }
+    }
+}
+
+.tabla-ordenada{
+    thead{
+        tr{
+            position: relative;
+
+            th{
+                position: relative;
+                padding-left: 18px;
+
+                &:before{
+                    @include centerY($top: 40%);
+                    left: 0;
+                    @include mycaret(up);
+                    color: $color-de-flecha-no-activa;
+                }
+
+                &:after{
+                    @include centerY($top: 60%);
+                    left: 0;
+                    @include mycaret;
+                    color: $color-de-flecha-no-activa;
+                }
+
+                &.orden-descendiente{
+                    &:after{
+                        color: $color-de-flecha-activa;
+                    }
+                }
+
+                &.orden-ascendiente{
+                    &:before{
+                        color: $color-de-flecha-activa;
+                    }
+                }
+
+                &:hover{
+                    color: $link;
+                    cursor: pointer;
+                }
+            }
         }
     }
 }

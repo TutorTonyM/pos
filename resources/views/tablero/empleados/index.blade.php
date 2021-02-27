@@ -72,15 +72,15 @@
 
 @if (!is_null($empleados) && $empleados->total() > 0)  
     <div class="table-responsive">
-        <table class="table table-striped tabla-presionable">
+        <table class="table table-striped tabla-presionable tabla-ordenada">
             <thead>
                 <tr>
-                    <th scope="col">Numero de Empleado</th>
-                    <th scope="col">P. Nombre</th>
-                    <th scope="col">S. Nombre</th>
-                    <th scope="col">P. Apellido</th>
-                    <th scope="col">S. Apellido</th>
-                    <th scope="col">Activo</th>
+                    <th scope="col" @oredenadoPor(numero)>Numero de Empleado</th>
+                    <th scope="col" @oredenadoPor(primer_nombre)>P. Nombre</th>
+                    <th scope="col" @oredenadoPor(segundo_nombre)>S. Nombre</th>
+                    <th scope="col" @oredenadoPor(primer_apellido)>P. Apellido</th>
+                    <th scope="col" @oredenadoPor(segundo_apellido)>S. Apellido</th>
+                    <th scope="col" @oredenadoPor(activo)>Activo</th>
                 </tr>
             </thead>
             <tbody>
