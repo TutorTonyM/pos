@@ -22,8 +22,10 @@ class EmpleadoController extends Controller
      */
     public function index()
     {
-        $empleados = Empleado::orderBy('numero')->paginate(10);
-        $claseOrden = ['campo' => 'numero', 'clase' => 'orden-descendiente'];
+        $ordenadoPor = request()->has('ordenadoPor') ? request('ordenadoPor') : 'numero';
+        $orden = request()->has('orden') ? request('orden') : 'asc';
+        $empleados = Empleado::orderBy($ordenadoPor, $orden)->paginate(10);
+        $claseOrden = ['campo' => $ordenadoPor, 'clase' => $orden];
         return view('tablero.empleados.index', compact('empleados', 'claseOrden'));
     }
 
@@ -121,58 +123,110 @@ class EmpleadoController extends Controller
 
     public function buscarEmpleados()
     {
+        
         if (is_null(request('consulta'))) {  
             $errors = new MessageBag();
             $errors->add('consulta', 'Un criterio de busqueda es requerido.');
             return back()->withErrors($errors);
         }
 
-        if (request('nombre')) request()->merge(['primer_nombre' => 1, 'segundo_nombre' => 1]);
-        if (request('apellido')) request()->merge(['primer_apellido' => 1, 'segundo_apellido' => 1]);
+        // if (request('nombre')) request()->merge(['primer_nombre' => 1, 'segundo_nombre' => 1]);
+        // if (request('apellido')) request()->merge(['primer_apellido' => 1, 'segundo_apellido' => 1]);
         if (request('telefono')) request()->merge(['telefono2' => 1]);
-        $ordenadoPor = request()->has('orderBy') ? request('orderBy') : request()->merge(['orderBy' => 'numero']);
-        $orden = request()->has('order') ? request('order') : request()->merge(['order' => 'desc']);
+        $ordenadoPor = request()->has('ordenadoPor') ? request('ordenadoPor') : 'numero';
+        $orden = request()->has('orden') ? request('orden') : 'asc';
         $empleados = Empleado::query();
         $cadenaDeConsulta = [];
         $consulta = request('consulta');
         $cadenaDeConsulta['consulta'] = $consulta;
         $criterios = [
             'numero', 
-            'contratdo_el', 
+            'contratado_el',
             'direccion', 
             'ciudad', 
             'estado', 
-            'codigo_postal', 
-            'primer_nombre', 
-            'segundo_nombre', 
-            'primer_apellido', 
-            'segundo_apellido', 
-            'telefono', 
-            'telefono2'
+            'codigo_postal',
+            'nombre' => [
+                'primer_nombre', 
+                'segundo_nombre', 
+            ],
+            'apellido' => [
+                'primer_apellido', 
+                'segundo_apellido', 
+            ],
+            'telefono' => [
+                'telefono', 
+                'telefono2'
+            ]
         ];
 
-        foreach($criterios as $criterio){
-            $valor = request($criterio);
-            if ($valor) {
-                $empleados = $empleados->where($criterio, 'LIKE', '%'.$consulta.'%');
-                $cadenaDeConsulta[$criterio] = $valor;
+        try{
+            foreach($criterios as $criterio => $subCriterio){
+
+                if (is_array(request($subCriterio))) {                 
+                    $valor = request($criterio);
+                    foreach($subCriterio as $key => $articulo){
+                        if ($valor) {
+                            if ($key == 0) {
+                                $empleados = $empleados->where($articulo, 'LIKE', '%'.$consulta.'%');
+                            }
+                            else{
+                                $empleados = $empleados->orWhere($articulo, 'LIKE', '%'.$consulta.'%');
+                            }
+                        }
+                    }
+                    
+                    $cadenaDeConsulta[$criterio] = $valor;
+                    break;
+                }
+                else{$valor = request($subCriterio);
+                    if ($valor) {
+                        $empleados = $empleados->where($subCriterio, 'LIKE', '%'.$consulta.'%');
+                        $cadenaDeConsulta[$subCriterio] = $valor;
+                        break;
+                    }
+                }
+                
                 request()->merge([$criterio => 0]);
-                break;
-            }
-        };
-
-        foreach($criterios as $criterio){
-            $valor = request($criterio);
-            if ($valor) {
-                $empleados = $empleados->orWhere($criterio, 'LIKE', '%'.$consulta.'%');
-                $cadenaDeConsulta[$criterio] = $valor;
-            }
-        };
-
-        $empleados = $empleados->orderBy($ordenadoPor, $orden);
-
-        $empleados = $empleados->paginate(10)->appends($cadenaDeConsulta);
-        return view('tablero.empleados.index', compact('empleados'));
+            };
+            
+            foreach($criterios as $criterio => $subCriterio){
+    
+                if (is_array(request($subCriterio))) {                 
+                    $valor = request($criterio);
+                    foreach($subCriterio as $articulo){
+                        if ($valor) {
+                            $empleados = $empleados->orWhere($articulo, 'LIKE', '%'.$consulta.'%');
+                        }
+                    }
+                    
+                    $cadenaDeConsulta[$criterio] = $valor;
+                }
+                else{                      
+                    $valor = request($subCriterio);
+                    if ($valor) {
+                        $empleados = $empleados->orWhere($subCriterio, 'LIKE', '%'.$consulta.'%');
+                        $cadenaDeConsulta[$subCriterio] = $valor;
+                    }
+                }
+                
+                request()->merge([$criterio => 0]);
+            };
+            
+            $empleados = $empleados->orderBy($ordenadoPor, $orden);
+            $claseOrden = ['campo' => $ordenadoPor, 'clase' => $orden];
+            $cadenaDeConsulta['ordenadoPor'] = $ordenadoPor;
+            $cadenaDeConsulta['orden'] = $orden;
+    
+            $empleados = $empleados->paginate(10)->appends($cadenaDeConsulta);
+            return view('tablero.empleados.index', compact('empleados', 'claseOrden', 'consulta'));
+        }
+        catch(Exception $e){
+            $errorMessage = 'Algo salio mal y la busqueda no puso der ejecutada.';
+            return view('tablero.empleados.index', compact('errorMessage', 'empleados', 'consulta'));
+        }
+        
+        
 
         // $validator = $request->validate([
         //     'consulta' => ['required']
@@ -257,8 +311,8 @@ class EmpleadoController extends Controller
         //     return view('tablero.empleados.index', compact('empleados'))->withErrors($errors);
         // }
         // catch(Exception $e){
-        //     $errorMessage = 'Algo salio mal y la busqueda no puso der ejecutada.';
-        //     return view('tablero.empleados.index', compact('errorMessage', 'empleados', 'consulta'));
+            // $errorMessage = 'Algo salio mal y la busqueda no puso der ejecutada.';
+            // return view('tablero.empleados.index', compact('errorMessage', 'empleados', 'consulta'));
         // }        
     }
 }
