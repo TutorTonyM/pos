@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // User::factory(5)->create();
+        $this->call(UnidadDeMedidaSeeder::class);
         Empleado::factory(500)->create();
     }
 }

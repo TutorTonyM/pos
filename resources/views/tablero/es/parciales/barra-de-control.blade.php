@@ -12,7 +12,16 @@
         <span>Empleados</span>
         <div class="menu">
             <a href="{{ route('empleados.index') }}">Ver Listado</a>
-            <a href="{{ route('empleados.create') }}">Nuevo Empleado</a>
+            <a href="{{ route('empleados.create') }}">Agregar Nuevo</a>
+        </div>
+    </div>
+
+    <div class="desplegable">
+        <i class="fas fa-balance-scale"></i>
+        <span>Unidades</span>
+        <div class="menu">
+            <a href="{{ route('unidades-de-medida.index') }}">Ver Listado</a>
+            <a href="{{ route('unidades-de-medida.create') }}">Agregar Nuevo</a>
         </div>
     </div>
 

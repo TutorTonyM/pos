@@ -23,6 +23,7 @@ Route::namespace('Tablero')->group(function ()
     Route::any('buscar-empleados', 'EmpleadoController@buscarEmpleados')->name('buscar.empleados');
     Route::resource('usuarios', 'UsuarioController');
     Route::resource('empleados', 'EmpleadoController');
+    Route::resource('unidades-de-medida', 'UnidadDeMedidaController');
 });
 
 
