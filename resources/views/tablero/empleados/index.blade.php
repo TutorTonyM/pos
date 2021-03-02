@@ -72,7 +72,7 @@
 
 @if (!is_null($empleados) && $empleados->total() > 0)  
     <div class="table-responsive">
-        <table class="table table-striped tabla-presionable tabla-ordenada">
+        <table class="table table-striped tabla-presionable tabla-ordenable">
             <thead>
                 <tr>
                     <th scope="col" @oredenadoPor(numero)>Numero de Empleado</th>
@@ -97,9 +97,8 @@
             </tbody>
         </table>
     </div>
-    
     <span>{{ $empleados->firstItem().'-'.$empleados->lastItem().' de '.$empleados->total() }}</span>
-    <span class="float-lg-right">{{ $empleados->links() }}</span>
+    <span class="float-lg-right">{{ $empleados->withQueryString()->links() }}</span>
 @else
     <p class="text-danger text-center mt-5"><strong>{{ $errorMessage ?? 'No hay resultados.' }}</strong></p>
 @endif

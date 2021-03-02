@@ -14,7 +14,7 @@ $link: $link;
     }
 }
 
-.tabla-ordenada{
+.tabla-ordenable{
     thead{
         tr{
             position: relative;
@@ -37,14 +37,14 @@ $link: $link;
                     color: $color-de-flecha-no-activa;
                 }
 
-                &.orden-descendiente{
-                    &:after{
+                &.asc{
+                    &:before{
                         color: $color-de-flecha-activa;
                     }
                 }
 
-                &.orden-ascendiente{
-                    &:before{
+                &.desc{
+                    &:after{
                         color: $color-de-flecha-activa;
                     }
                 }

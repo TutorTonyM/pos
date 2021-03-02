@@ -226,14 +226,14 @@
   background-color: #CCCCCC !important;
 }
 
-.tabla-ordenada thead tr {
+.tabla-ordenable thead tr {
   position: relative;
 }
-.tabla-ordenada thead tr th {
+.tabla-ordenable thead tr th {
   position: relative;
   padding-left: 18px;
 }
-.tabla-ordenada thead tr th:before {
+.tabla-ordenable thead tr th:before {
   position: absolute;
   top: 40%;
   transform: translateY(-50%);
@@ -250,7 +250,7 @@
   border-left: 0.4em solid transparent;
   color: #999999;
 }
-.tabla-ordenada thead tr th:after {
+.tabla-ordenable thead tr th:after {
   position: absolute;
   top: 60%;
   transform: translateY(-50%);
@@ -267,13 +267,13 @@
   border-left: 0.4em solid transparent;
   color: #999999;
 }
-.tabla-ordenada thead tr th.orden-descendiente:after {
+.tabla-ordenable thead tr th.asc:before {
   color: #000000;
 }
-.tabla-ordenada thead tr th.orden-ascendiente:before {
+.tabla-ordenable thead tr th.desc:after {
   color: #000000;
 }
-.tabla-ordenada thead tr th:hover {
+.tabla-ordenable thead tr th:hover {
   color: #1E90FF;
   cursor: pointer;
 }

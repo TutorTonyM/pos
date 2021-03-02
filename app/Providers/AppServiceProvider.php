@@ -29,12 +29,13 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
         Paginator::useBootstrap();
         
-        Blade::directive('oredenadoPor', function ($expression) {       
+        Blade::directive('oredenadoPor', function ($expression) {
             return '
                 <?php
                     if($claseOrden["campo"] == "'.$expression.'"){
                         echo e("class=".$claseOrden["clase"]);
                     }
+                    echo e(" data-ordenado-por='.$expression.'");
                 ?>
             ';
         });
